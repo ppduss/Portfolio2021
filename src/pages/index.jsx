@@ -7,6 +7,7 @@ import Collage from "../components/collage";
 import Skills from "../components/skills";
 import Project from "../components/project";
 import SEO from "../components/seo";
+import Modal from '../components/modal';
 
 
 const Main = styled.div`
@@ -20,10 +21,13 @@ const ContainerLeft = styled.div`
   border-right: 1px solid #111;
   max-width: 30vw;
   padding-right: 90px;
+  margin-top: 100px;
+
 `;
 const ContainerRight = styled.div`
   /* background-color: whitesmoke; */
   margin-left: 100px;
+  margin-top: 100px;
   width: 60vw;
 `;
 
@@ -32,6 +36,7 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Patrick Dussault" />
     <Main>
+      <Modal/>
     <ContainerLeft>
       <h1>Patrick Dussault</h1>
       <p>I develop websites</p>
