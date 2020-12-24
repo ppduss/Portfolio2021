@@ -1,5 +1,19 @@
-import styled from "styled-components";
+import {styled, css, keyframes }from "styled-components";
 import React from "react";
+
+// @import compass // n is number of stars required
+
+const multipleboxshadow = (n) => {
+  $value: "#{random(2000)}px #{random(2000)}px #000"
+  @for $i from 2 through $n
+  $value: "#{$value} , #{random(2000)}px #{random(2000)}px #000"
+  @return unquote($value)
+};
+
+const shadowssmall = multipleboxshadow(100);
+const shadowsmedium = multipleboxshadow(200);
+const shadowsbig = multipleboxshadow(100);
+    
 
 const animStar = keyframes`
   from {
@@ -18,12 +32,12 @@ const Intro = styled.div`
   overflow: hidden;
 `;
 
-const Stars = styled.div`
+const Stars = css`
   width: px;
   height: 6px;
   background: transparent;
-  box-shadow: $shadows-small;
-  animation: animStar 70s linear infinite;
+  box-shadow: ${shadowssmall};
+  animation: ${animStar} 70s linear infinite;
    
   &:after {
     content: " ";
@@ -32,16 +46,16 @@ const Stars = styled.div`
     width: px;
     height: 6px;
     background: transparent;
-    box-shadow: $shadows-small;
+    box-shadow: ${shadowssmall};
   }
 `;
 
-const Stars2 = styled.div`
+const Stars2 = css`
   width: px;
   height: 3px;
   background: transparent;
-  box-shadow: $shadows-medium;
-  animation: animStar 100s linear infinite;
+  box-shadow: ${shadowsmedium};
+  animation: ${animStar} 100s linear infinite;
     
   &:after {
     content: " ";
@@ -50,16 +64,16 @@ const Stars2 = styled.div`
     width: px; 
     height: 3px;
     background: transparent;
-    box-shadow: $shadows-medium;
+    box-shadow: ${shadowsmedium};
   }
 `;
 
-const Stars3 = styled.div`
+const Stars3 = css`
   width: px;
   height: 1px;
   background: transparent;
-  box-shadow: $shadows-big;
-  animation: animStar 150s linear infinite;
+  box-shadow: ${shadowsbig};
+  animation: ${animStar} 150s linear infinite;
     
   &:after {
     content: " ";
@@ -68,7 +82,7 @@ const Stars3 = styled.div`
     width: px;
     height: 1px;
     background: transparent;
-    box-shadow: $shadows-big;
+    box-shadow: ${shadowsbig};
   }
 `;
 
