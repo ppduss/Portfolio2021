@@ -6,6 +6,8 @@ const Proj = styled.div`
   background-color: whitesmoke;
   border-top: 1px solid #111;
   margin-bottom: 40px;
+  font-weight: 400;
+  font-size: 0.8em;
 `;
 
 const Tools = styled.div`

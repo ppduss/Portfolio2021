@@ -7,7 +7,7 @@ import Collage from "../components/collage";
 import Skills from "../components/skills";
 import Project from "../components/project";
 import SEO from "../components/seo";
-import Modal from '../components/modal';
+import Modal from '../components/modal/modal';
 
 
 const Main = styled.div`
