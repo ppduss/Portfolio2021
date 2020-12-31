@@ -21,7 +21,7 @@ const ContainerLeft = styled.div`
   /* background-color: whitesmoke; */
   border-right: 1px solid #111;
   max-width: 25vw;
-  padding-right: 90px;
+  padding-right: 50px;
   margin-top: 100px;
 
 `;
