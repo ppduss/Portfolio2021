@@ -7,7 +7,8 @@ import Collage from "../components/collage";
 import Skills from "../components/skills";
 import Project from "../components/project";
 import SEO from "../components/seo";
-import Modal from '../components/modal/modal';
+// import Modal from '../components/modal/modal';
+import mars from '../images/tmwn.jpeg';
 
 
 const Main = styled.div`
@@ -19,7 +20,7 @@ const Main = styled.div`
 const ContainerLeft = styled.div`
   /* background-color: whitesmoke; */
   border-right: 1px solid #111;
-  max-width: 30vw;
+  max-width: 25vw;
   padding-right: 90px;
   margin-top: 100px;
 
@@ -36,7 +37,7 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Patrick Dussault" />
     <Main>
-      <Modal/>
+      {/* <Modal/> */}
     <ContainerLeft>
       <h1>Patrick Dussault</h1>
       <p>I develop websites</p>
@@ -53,13 +54,13 @@ const IndexPage = () => (
       <Skills/>
         <h5>Projects</h5>
         
-        <Project title={"The Mars Weather Network"} subTitle={"A weather report using two NASA APIs that tracks the last seven available Sols (Martian days)."} live={'https://ppduss.github.io/TheMarsWeatherNetwork/'} github={"https://ppduss.github.io/TheMarsWeatherNetwork/"} projSkills={['HTML5', "CSS3 - SCSS", 'Flexbox + Grid', "React", 'API']} />  
+        <Project title={"The Mars Weather Network"} subTitle={"A weather report using two NASA APIs that tracks the last seven available Sols (Martian days)."} previewImg={mars} liveLink={'https://ppduss.github.io/TheMarsWeatherNetwork/'} ghLink={"https://ppduss.github.io/TheMarsWeatherNetwork/"} projSkills={['HTML5', "CSS3 - SCSS", 'Flexbox + Grid', "React", 'API']} />  
 
-        <Project title={"Coffee Prescriber"} subTitle={"A playful app that tracks your happiness to productivity ratio as you drink coffee and helps monitor whether it's wise to keep drinking."} live={'https://ppduss.github.io/Coffee-Prescriber/'} github={"https://github.com/ppduss/Coffee-Prescriber"} projSkills={['HTML5', "CSS3 - SCSS", 'Flexbox', "React"]} /> 
+        <Project title={"Coffee Prescriber"} subTitle={"A playful app that tracks your happiness to productivity ratio as you drink coffee and helps monitor whether it's wise to keep drinking."} previewImg={"tmwn"} liveLink={'https://ppduss.github.io/Coffee-Prescriber/'} ghLink={"https://github.com/ppduss/Coffee-Prescriber"} projSkills={['HTML5', "CSS3 - SCSS", 'Flexbox', "React"]} /> 
         
-        <Project title={"RGB Game"} subTitle={"Guess which box contains the random RGB value!"} live={'https://ppduss.github.io/RGB/'} github={"https://github.com/ppduss/RGB"} projSkills={['HTML', "CSS", 'JS']} /> 
+        <Project title={"RGB Game"} subTitle={"Guess which box contains the random RGB value!"} previewImg={"tmwn"} liveLink={'https://ppduss.github.io/RGB/'} ghLink={"https://github.com/ppduss/RGB"} projSkills={['HTML', "CSS", 'JS']} /> 
         
-        <Project title={"Ratatap Drum Pad"} subTitle={"A clone of the patatap.com drum pads using my favorite samples."} live={'https://ppduss.github.io/Ratatap/'} github={"https://github.com/ppduss/Ratatap"} projSkills={['HTML5', 'CSS3', 'JS', 'Paper.js', 'Howler.js']} />  
+        <Project title={"Ratatap Drum Pad"} subTitle={"A clone of the patatap.com drum pads using my favorite samples."} previewImg={"tmwn"} liveLink={'https://ppduss.github.io/Ratatap/'} ghLink={"https://github.com/ppduss/Ratatap"} projSkills={['HTML5', 'CSS3', 'JS', 'Paper.js', 'Howler.js']} />  
       
 
 
