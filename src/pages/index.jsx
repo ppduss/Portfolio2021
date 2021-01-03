@@ -6,6 +6,7 @@ import Portrait from "../components/portrait";
 import Collage from "../components/collage";
 import Skills from "../components/skills";
 import Project from "../components/project";
+import About from '../components/about';
 import SEO from "../components/seo";
 // import Modal from '../components/modal/modal';
 import mars from '../images/tmwn.jpeg';
@@ -42,7 +43,7 @@ const IndexPage = () => (
       <h1>Patrick Dussault</h1>
       <p>I develop websites</p>
       <p>Check me out</p>
-      <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
+      <div style={{ maxWidth: `250px`, marginBottom: `1.45rem` }}>
         <Portrait/>
       </div>
         
@@ -51,7 +52,8 @@ const IndexPage = () => (
     </ContainerLeft>
   
     <ContainerRight>
-      <Skills/>
+        <Skills />
+        <About/>
         <h5>Projects</h5>
         
         <Project title={"The Mars Weather Network"} subTitle={"A weather report using two NASA APIs that tracks the last seven available Sols (Martian days)."} previewImg={mars} liveLink={'https://ppduss.github.io/TheMarsWeatherNetwork/'} ghLink={"https://ppduss.github.io/TheMarsWeatherNetwork/"} projSkills={['HTML5', "CSS3 - SCSS", 'Flexbox + Grid', "React", 'API']} />  

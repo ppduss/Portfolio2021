@@ -12,14 +12,15 @@ const Proj = styled.div`
   margin-bottom: 35px;
   font-weight: 400;
   font-size: 0.8em;
-  padding: 20px, 20px, 0px, 0px;
+  /* padding: 20px, 20px, 20px, 20px; */
 `;
 
 const Title = styled.h4`  
-  max-width: 100px;
+  /* max-width: 100px; */
   background-color: #d4d4d4;
   padding: 12px;
   word-break: normal;
+  height: 100px;
 `;
 const Subtitle = styled.p`
   /* display: relative;   */
@@ -30,23 +31,24 @@ const Subtitle = styled.p`
 
 const FirstContainer = styled.div`
 display: flex;  
-  margin-left: 10px;
+  /* margin-left: 10px; */
+  /* margin-bottom: 0px; */
 `;
 const SecondContainer = styled.div`  
-  display: flex;
+  /* display: flex; */
   justify-content: center;
 `;
 
 const Tools = styled.div`
   background-color: white;
-  /* display: flex; */
-  width: 30%;
+  display: flex;
+  /* width: 30%; */
   min-width: 120px;
-  padding: 5px;
+  padding: 10px;
 `;
 
 const Preview = styled.img`
-  width: 220px;
+  width: 200px;
 `;
 
 const Project = ({title, subTitle, previewImg, ghLink, liveLink, projSkills}) => {
@@ -55,9 +57,9 @@ const Project = ({title, subTitle, previewImg, ghLink, liveLink, projSkills}) =>
     <Proj>
       <FirstContainer>
         <Title>{title}</Title>
+        <SecondContainer>
         <Subtitle>{subTitle}</Subtitle>
-      </FirstContainer> 
-      <SecondContainer>
+          
         <Tools>
           {projSkills.map((s, i) => {
             return (
@@ -65,8 +67,11 @@ const Project = ({title, subTitle, previewImg, ghLink, liveLink, projSkills}) =>
             )
           })}
         </Tools>
-        <Preview src={previewImg}/>
+        
       </SecondContainer>
+      <Preview src={previewImg}/>
+      </FirstContainer> 
+   
         
       <Button goto={liveLink}>View Live</Button>
       <Button goto={ghLink}>View on GitHub</Button>
