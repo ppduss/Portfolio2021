@@ -5,22 +5,20 @@ import Button from "./Button";
 
 
 const Proj = styled.div`
-/* display: flex; */
-/* flex-direction: column; */
   background-color: whitesmoke;
-  border-top: 5px solid #333333;
-  margin-bottom: 35px;
+  border-top: 5px solid #000000;
+  margin-bottom: 60px;
   font-weight: 400;
   font-size: 0.8em;
   /* padding: 20px, 20px, 20px, 20px; */
 `;
 
 const Title = styled.h4`  
-  /* max-width: 100px; */
+  max-width: 300px;
   background-color: #d4d4d4;
   padding: 12px;
   word-break: normal;
-  height: 100px;
+  height: 48px;
 `;
 const Subtitle = styled.p`
   /* display: relative;   */
@@ -30,7 +28,8 @@ const Subtitle = styled.p`
 `;
 
 const FirstContainer = styled.div`
-display: flex;  
+  display: flex;  
+  justify-content: space-between;
   /* margin-left: 10px; */
   /* margin-bottom: 0px; */
 `;
@@ -48,7 +47,8 @@ const Tools = styled.div`
 `;
 
 const Preview = styled.img`
-  width: 200px;
+  width: 300px;
+  margin-bottom: 0;
 `;
 
 const Project = ({title, subTitle, previewImg, ghLink, liveLink, projSkills}) => {
@@ -56,25 +56,26 @@ const Project = ({title, subTitle, previewImg, ghLink, liveLink, projSkills}) =>
   return (
     <Proj>
       <FirstContainer>
-        <Title>{title}</Title>
         <SecondContainer>
-        <Subtitle>{subTitle}</Subtitle>
-          
-        <Tools>
+          <Title>{title}</Title>
+          <Subtitle>{subTitle}</Subtitle>
+          <Tools>
           {projSkills.map((s, i) => {
             return (
               <div key={i + s}>{s}</div>
             )
           })}
-        </Tools>
+          </Tools>
+          <Button goto={liveLink}>View Live</Button>
+          <Button goto={ghLink}>View on GitHub</Button>
+        </SecondContainer>
         
-      </SecondContainer>
-      <Preview src={previewImg}/>
+        <Preview src={previewImg}/>
+
       </FirstContainer> 
-   
+  
         
-      <Button goto={liveLink}>View Live</Button>
-      <Button goto={ghLink}>View on GitHub</Button>
+
       
       </Proj>
 

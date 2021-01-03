@@ -10,7 +10,7 @@ import About from '../components/about';
 import SEO from "../components/seo";
 // import Modal from '../components/modal/modal';
 import mars from '../images/tmwn.jpeg';
-
+import Maze from '../components/Maze';
 
 const Main = styled.div`
   display: flex;
@@ -39,7 +39,8 @@ const IndexPage = () => (
     <SEO title="Patrick Dussault" />
     <Main>
       {/* <Modal/> */}
-    <ContainerLeft>
+      <ContainerLeft>
+      <Maze/>
       <h1>Patrick Dussault</h1>
       <p>I develop websites</p>
       <p>Check me out</p>
