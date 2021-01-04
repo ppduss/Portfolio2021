@@ -29,7 +29,7 @@ const Pointer = styled.img`
 // ---------LOGIC -----------//
 
 const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const ctx = canvas.getContext("2d");
 
 const state = {
   mouse: {
@@ -66,7 +66,10 @@ const Rotating = () => (
     <Pointercontainer>
     <Pointer src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/pink-pointer.svg" alt id="pointer"/>
     </Pointercontainer>
+    
     </Borderbox>
+  
+  
 );
 
 export default Rotating;

@@ -8,9 +8,10 @@ import Skills from "../components/skills";
 import Project from "../components/project";
 import About from '../components/about';
 import SEO from "../components/seo";
+import Divider from '../components/divider';
 // import Modal from '../components/modal/modal';
 import mars from '../images/tmwn.jpeg';
-import Maze from '../components/Maze';
+// import Maze from '../components/Maze';
 
 const Main = styled.div`
   display: flex;
@@ -20,8 +21,8 @@ const Main = styled.div`
 
 const ContainerLeft = styled.div`
   /* background-color: whitesmoke; */
-  border-right: 1px solid #111;
-  max-width: 25vw;
+  /* border-right: 1px solid #111; */
+  max-width: 20vw;
   padding-right: 50px;
   margin-top: 100px;
 
@@ -40,7 +41,7 @@ const IndexPage = () => (
     <Main>
       {/* <Modal/> */}
       <ContainerLeft>
-      <Maze/>
+      {/* <Maze/> */}
       <h1>Patrick Dussault</h1>
       <p>I develop websites</p>
       <p>Check me out</p>
@@ -51,10 +52,11 @@ const IndexPage = () => (
       <Link to="/page-2/">Go to page 2</Link> <br />
         <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
     </ContainerLeft>
-  
-    <ContainerRight>
-        <Skills />
+    <Divider/>
+      <ContainerRight>
         <About/>
+        
+        <Skills />
         <h5>Projects</h5>
         
         <Project title={"The Mars Weather Network"} subTitle={"A weather report using two NASA APIs that tracks the last seven available Sols (Martian days)."} previewImg={mars} liveLink={'https://ppduss.github.io/TheMarsWeatherNetwork/'} ghLink={"https://ppduss.github.io/TheMarsWeatherNetwork/"} projSkills={['HTML5', "CSS3 - SCSS", 'Flexbox + Grid', "React", 'API']} />  

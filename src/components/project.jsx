@@ -10,15 +10,17 @@ const Proj = styled.div`
   margin-bottom: 60px;
   font-weight: 400;
   font-size: 0.8em;
+  max-width: 850px;
   /* padding: 20px, 20px, 20px, 20px; */
 `;
 
 const Title = styled.h4`  
-  max-width: 300px;
+  font-weight: 500;
   background-color: #d4d4d4;
-  padding: 12px;
+  padding: 10px;
   word-break: normal;
-  height: 48px;
+  margin-bottom: 10px;
+  /* height: 48px; */
 `;
 const Subtitle = styled.p`
   /* display: relative;   */
@@ -36,6 +38,7 @@ const FirstContainer = styled.div`
 const SecondContainer = styled.div`  
   /* display: flex; */
   justify-content: center;
+  padding: 0px, 110px, 0px, 0px;
 `;
 
 const Tools = styled.div`
