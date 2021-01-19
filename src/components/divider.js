@@ -18,7 +18,7 @@ const Line = styled.line`
  `;
 const Svg = styled.svg`
  opacity: 0;
- animation: ${lineanim} 4s cubic-bezier(0,0.97,.13,1) forwards;
+ animation: ${lineanim} 6s cubic-bezier(0,0.97,.53,1) forwards;
  animation-iteration-count: 1;
  animation-delay: 1s;
 `;

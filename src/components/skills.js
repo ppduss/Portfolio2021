@@ -2,7 +2,7 @@ import styled from "styled-components";
 import React from "react"
 
 const TopSkills = styled.div`
-  /* background-color: whitesmoke; */
+  background-color: ${({ theme: { colors } }) => colors.shadyblue};
   border-top: 1px solid #111;
   margin-bottom: 200px;
 

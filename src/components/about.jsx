@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const AboutTxt = styled.p`
-  /* background-color: #f3f3f3; */
+  background-color: #f3f3f3;
   /* color: white; */
   `;
 

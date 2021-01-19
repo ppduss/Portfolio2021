@@ -4,7 +4,7 @@ import Button from "./Button";
 
 
 const Proj = styled.div`
-  background-color: whitesmoke;
+  background-color: ${({ theme: { colors } }) => colors.greenstone};
   border-top: 5px solid #000000;
   margin-bottom: 60px;
   font-weight: 400;
@@ -14,8 +14,9 @@ const Proj = styled.div`
 `;
 
 const Title = styled.h4`  
-  font-weight: 500;
-  background-color: #d4d4d4;
+  color: ${({ theme: { colors } }) => colors.white};
+  font-weight: 600;
+  background-color:${({ theme: { colors } }) => colors.twilightblue};
   padding: 10px;
   word-break: normal;
   margin-bottom: 10px;

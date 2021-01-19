@@ -22,7 +22,10 @@
     "styled-components": "^5.2.1"
   },
   "devDependencies": {
-    "prettier": "2.2.1"
+    "prettier": "2.2.1",
+    "sass": "^1.32.4",
+    "sass-loader": "^10.1.1",
+    "webpack": "^4.44.2"
   },
   "keywords": [
     "gatsby"
@@ -38,7 +41,7 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "repository": {
-    "type": "git",
+    "": "git",
     "url": "https://github.com/gatsbyjs/gatsby-starter-default"
   },
   "bugs": {
