@@ -17,6 +17,7 @@ const Line = styled.line`
  stroke-width: 5;
  `;
 const Svg = styled.svg`
+margin-top: 400px;
  opacity: 0;
  animation: ${lineanim} 6s cubic-bezier(0,0.97,.53,1) forwards;
  animation-iteration-count: 1;

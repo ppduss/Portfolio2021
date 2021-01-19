@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
 import styled from "styled-components";
-import Layout from "../components/layout";
 import Portrait from "../components/portrait";
 import Collage from "../components/collage";
 import Skills from "../components/skills";
@@ -37,9 +36,9 @@ const ContainerRight = styled.div`
 `;
 
 
+
 const IndexPage = () => (
   <Theme>
-  <Layout>
     <SEO title="Patrick Dussault" />
     <Main>
       {/* <Modal/> */}
@@ -48,18 +47,15 @@ const IndexPage = () => (
       <h1>Patrick Dussault</h1>
       <p>I develop websites</p>
       <p>Check me out</p>
-        <div style={{ maxWidth: `250px`, marginBottom: `1.45rem`, borderRadius: '200px' }}>
-        <Portrait/>
-      </div>
+      <Portrait/>
         
       <Link to="/page-2/">Go to page 2</Link> <br />
         <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
       </ContainerLeft>
-        <Divider />
-        <Collage/> 
+      <Divider/>
       <ContainerRight>
 
-          
+        <Collage/>   
         <About/>
         <Skills />
         <h5>Projects</h5>
@@ -73,7 +69,6 @@ const IndexPage = () => (
     </ContainerRight>
       
     </Main>
-  </Layout>
   </Theme>
 )
 
