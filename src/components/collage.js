@@ -18,7 +18,7 @@ const Img = styled.img`
     width: 600px;
 `}
   ${media.xl`
-    width: 800px;
+    width: 700px;
 `}`
 
 const Collage = () => (

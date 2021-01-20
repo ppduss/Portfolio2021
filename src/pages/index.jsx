@@ -20,17 +20,20 @@ const Main = styled.div`
   flex-direction: column;
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 500;
+  padding: 30px;
+
 `;
 const TopContainer = styled.div`
-  background-color: ${({ theme: { colors } }) => colors.white};
+  background-color: ${({ theme: { colors } }) => colors.greenstone};
   display: flex;
   justify-content: space-around;
+  align-items: center;
   height: 500px;
-  width: 100vw;
+  /* width: 100vw; */
   margin-top: 100px;
 `;
 const ProfileContainer = styled.div`
-  background-color: ${({ theme: { colors } }) => colors.white};
+  background-color: ${({ theme: { colors } }) => colors.greenstone};
   display: flex;
   flex-direction: column;
 `;
@@ -48,7 +51,7 @@ const ContainerLeft = styled.div`
   padding-right: 50px;
 `;
 const ContainerRight = styled.div`
-  background-color: ${({ theme: { colors } }) => colors.white};
+  background-color: ${({ theme: { colors } }) => colors.butter};
   margin-left: 100px;
   width: 70vw;
 `;

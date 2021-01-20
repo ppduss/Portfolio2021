@@ -4,8 +4,7 @@ import { ThemeProvider } from "styled-components";
 const theme = {
   colors: {
     clay: '#d1cdca',
-    butter: '#f3e9e1',
-    propperbutter: '#f3e9e2',
+    butter: '#f3e9e2',
     greypoupon: '#f0e9e1',
     greenstone: '#bbd1c9',
     twilightblue: '#305a62',

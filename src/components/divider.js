@@ -7,7 +7,7 @@ const lineanim = keyframes`
     opacity: 0;
   }
   to {
-    height: 2000;
+    height: 1500;
     opacity: 1;
   }
 `;
@@ -17,16 +17,16 @@ const Line = styled.line`
  stroke-width: 5;
  `;
 const Svg = styled.svg`
-margin-top: 400px;
+margin-top: -100px;
  opacity: 0;
- animation: ${lineanim} 6s cubic-bezier(0,0.97,.53,1) forwards;
+ animation: ${lineanim} 9s cubic-bezier(0,0.97,.53,1) forwards;
  animation-iteration-count: 1;
- animation-delay: 1s;
+ animation-delay: 500ms;
 `;
 
 const Divider = () => (
 
-  <Svg height="2000" width="8">
+  <Svg height="1500" width="8">
   <Line x1="0" y1="0" x2="0" y2="2000" />
   Sorry, your browser does not support inline SVG.
   </Svg>
