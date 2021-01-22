@@ -9,7 +9,7 @@ const lineanim = keyframes`
   }
   to {
     height: 30px;
-    width: 125px;
+    width: 9vw;
   }
 `;
 const drop = keyframes`
@@ -27,33 +27,34 @@ const drop = keyframes`
 
 const IconContainer = styled.div`
   position: relative;
-  width: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 18vw;
   margin-top: 30px;
 `
 const IconName = styled.p`
-  top: 15px;
-  left: 100px;
-  width: 0px;
-  height: 0px;
+  top: 2px;
+  left: 14vw;
   position: absolute;
   transition: all 200ms ease;
   opacity: 0;
+  /* display: none; */
   ${IconContainer}:hover & {
     /* animation: ${drop} 400ms cubic-bezier(.41,.99,.74,.95) forwards;
     animation-iteration-count: 1;
     animation-delay: 500ms; */
+    /* display: block; */
     opacity: 1;
-    height: 30px;
-    width: 60px;
     transition: all 300ms ease 400ms;
   }
 `;
 
 const Icon = styled.img`
-  width: 40%;
+  width: 50px;
   position: absolute;
   ${media.lg`
-    width: 50%;
+    width: 65px;
   `}
 `;
 const SVGContainer = styled.div`
@@ -61,8 +62,8 @@ const SVGContainer = styled.div`
 `;
 
 const SVGicon = styled.svg`
-  top: 30px;
-  left: 30px;
+  top: 23px;
+  left: 50%;
   width: 0px;
   height: 0px; 
   /* background-color: #ffffff; */
@@ -79,13 +80,14 @@ const Line = styled.line`
 `;
 
 const Skill = ({ src, name }) => (
-  <IconContainer><IconName>{name}</IconName>
+  <IconContainer>
     <Icon src={src} />
+    <IconName>{name}</IconName>
     <SVGContainer>
-      <SVGicon height="20" width="125">
-        <Line x1="0" y1="0" x2="200" y2="0" />
+      <SVGicon height="20" width="300">
+        <Line x1="0" y1="0" x2="300" y2="0" />
           Sorry, your browser does not support inline SVG.
-        </SVGicon>
+      </SVGicon>
     </SVGContainer>
   </IconContainer>
 )

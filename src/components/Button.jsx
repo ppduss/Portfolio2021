@@ -22,7 +22,7 @@ const StyledButton = styled.button`
     border-color: grey;
   }
    &:hover {
-    background-color: white;
+    background-color: ${({ theme: { colors } }) => colors.shadyblue};
     cursor: pointer;
   }
   &:active {

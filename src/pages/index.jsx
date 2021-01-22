@@ -29,49 +29,62 @@ const TopContainer = styled.div`
   align-items: center;
   height: 350px;
   z-index: 2;
-  margin: 30px 30px 0 30px;
+  margin: 80px 30px 0 30px;
 
 `;
 const ProfileContainer = styled.div`
   /* background-color: ${({ theme: { colors } }) => colors.greenstone}; */
   display: flex;
   flex-direction: column;
-  margin-left: 20px;
+  margin-left: 5vw;
+  margin-top: 200px;
+
 `;
 const CollageAboutContainer = styled.div` 
   display: flex;
   flex-direction: column;
-  margin-top: 600px;
+  margin-top: 140px;
   margin-right: 1vw;
+  ${media.md`
+    margin-top: 140px;
+
+  `}
+  ${media.lg`
+    margin-top: 600px;
+
+  `}
+  ${media.xl`
+    margin-top: 500px;
+  `}
 `;
 
 const SplitContainer = styled.div`
   background-color: ${({ theme: { colors } }) => colors.butter};
   display: flex;
+  margin-top: 180px;
 `;
 const ContainerLeft = styled.div`
   /* display:flex;
   flex-direction: column; */
-  width: 150px;
-  ${media.lg`
+  width: 18vw; //must be controlled in conjct. with IconContainer
+  /* ${media.lg`
     width: 190px;
-  `}
+  `} */
 
 `;
 const ContainerRight = styled.div`
   background-color: ${({ theme: { colors } }) => colors.butter};
-  margin-top: 200px;
-  margin-left: 10vw;
+  margin-left: 12vw;
   width: 70vw;
   /* display: flex;
-  flex-direction: column;
-  align-items: left; */
+  flex-direction: column; */
+  /* justify-items: left; */
 `;
 
 const TopSVG = styled.svg`
   /* margin-top: -20px; */
   transform: scaleX(-1);
-  width: 100%;
+  margin: 0 30px;
 `;
 
 
@@ -84,13 +97,13 @@ const IndexPage = () => (
       <TopContainer>
         <ProfileContainer>
           <h1>Patrick Dussault</h1>
-          <p>I develop websites</p>
+          <h3>I develop websites</h3>
           <p>Check me out</p>
           <Portrait />
         </ProfileContainer>
         <CollageAboutContainer>
-          
-          <About/><Collage /> 
+          <About />
+          <Collage /> 
         </CollageAboutContainer>
       </TopContainer>
       {/* <TopSVG xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#bbd1c9" fill-opacity="1" d="M0,320L720,256L1440,64L1440,0L720,0L0,0Z"></path></TopSVG> */}

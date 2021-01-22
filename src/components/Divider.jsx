@@ -20,7 +20,7 @@ const Line = styled.line`
  `;
 
 const Svg = styled.svg`
-  margin-top: -150px;
+  margin-top: -100px;
  opacity: 0;
  animation: ${lineanim} 5s cubic-bezier(.41,.99,.74,.95) forwards;
  animation-iteration-count: 1;

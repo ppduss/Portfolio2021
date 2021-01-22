@@ -8,7 +8,6 @@ import ReactIcon from '../../images/skills/react_icon.png'
 const TopSkills = styled.div`
   background-color: ${({ theme: { colors } }) => colors.butter};
   margin-bottom: 200px;
-  margin-left: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
