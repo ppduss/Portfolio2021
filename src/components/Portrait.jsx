@@ -10,7 +10,7 @@ const PortImg = styled.img`
     width: 280px;
 `}
   ${media.xl`
-    width: 350px;
+    width: 300px;
 `}
 `
 

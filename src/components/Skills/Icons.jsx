@@ -1,5 +1,6 @@
 import styled, { keyframes } from "styled-components";
 import React from "react"
+import media from '../../media';
 
 const lineanim = keyframes`
   from {
@@ -36,8 +37,6 @@ const IconName = styled.p`
   height: 0px;
   position: absolute;
   transition: all 200ms ease;
-
-  /* background-color: white; */
   opacity: 0;
   ${IconContainer}:hover & {
     /* animation: ${drop} 400ms cubic-bezier(.41,.99,.74,.95) forwards;
@@ -47,14 +46,15 @@ const IconName = styled.p`
     height: 30px;
     width: 60px;
     transition: all 300ms ease 400ms;
-
   }
 `;
 
 const Icon = styled.img`
-  width: 50%;
+  width: 40%;
   position: absolute;
-
+  ${media.lg`
+    width: 50%;
+  `}
 `;
 const SVGContainer = styled.div`
   margin-top: 70px;

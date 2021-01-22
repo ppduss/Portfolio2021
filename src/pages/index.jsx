@@ -11,6 +11,7 @@ import Theme from '../Theme';
 import Divider from '../components/Divider';
 import mars from '../images/tmwn.jpeg';
 import media from '../media';
+import GlobalStyle from '../globalStyles';
 
 
 const Main = styled.div`
@@ -19,16 +20,17 @@ const Main = styled.div`
   flex-direction: column;
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 500;
-  padding: 30px;
+  /* padding: 30px; */
 `;
 const TopContainer = styled.div`
   background-color: ${({ theme: { colors } }) => colors.greenstone};
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 500px;
+  height: 350px;
   z-index: 2;
-  /* margin-top: 100px; */
+  margin: 30px 30px 0 30px;
+
 `;
 const ProfileContainer = styled.div`
   /* background-color: ${({ theme: { colors } }) => colors.greenstone}; */
@@ -39,7 +41,8 @@ const ProfileContainer = styled.div`
 const CollageAboutContainer = styled.div` 
   display: flex;
   flex-direction: column;
-  margin-top: 300px;
+  margin-top: 600px;
+  margin-right: 1vw;
 `;
 
 const SplitContainer = styled.div`
@@ -49,16 +52,15 @@ const SplitContainer = styled.div`
 const ContainerLeft = styled.div`
   /* display:flex;
   flex-direction: column; */
-  width: 160px;
-  /* ${media.lg`
-    width: 180px;
+  width: 150px;
+  ${media.lg`
+    width: 190px;
   `}
-  ${media.xl`
-    width: 200px;
-  `} */
+
 `;
 const ContainerRight = styled.div`
   background-color: ${({ theme: { colors } }) => colors.butter};
+  margin-top: 200px;
   margin-left: 10vw;
   width: 70vw;
   /* display: flex;
@@ -69,11 +71,14 @@ const ContainerRight = styled.div`
 const TopSVG = styled.svg`
   /* margin-top: -20px; */
   transform: scaleX(-1);
+  width: 100%;
 `;
 
 
 const IndexPage = () => (
+  
   <Theme>
+    <GlobalStyle/>
     <SEO title="Patrick Dussault" />
     <Main>
       <TopContainer>

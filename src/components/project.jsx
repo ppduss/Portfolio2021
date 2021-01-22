@@ -7,9 +7,9 @@ import media from '../media';
 const Proj = styled.div`
   background-color: ${({ theme: { colors } }) => colors.white};
   /* border: 1px solid black; */
-  border-top: 5px solid #000000;
+  border-top: 3px solid ${({ theme: { colors } }) => colors.black};
   margin-bottom: 60px;
-  margin-top: 60px;
+  margin-top: 80px;
   font-weight: 400;
   font-size: 0.8em;
   max-width: 850px;
