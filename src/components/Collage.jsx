@@ -5,15 +5,14 @@ import media from '../media';
 
 const ImgContainer = styled.div`
   /* position: absolute; */
-  display: block;
-  top: 0;
-  left: 0;
-  margin-top: -30px;
+  /* display: block;
+  top: -90px;
+  right: 2vw; */
+  margin-top: 40px;
 `
 
 const Img = styled.img`
   width: 400px;
-  /* border-radius: 100%; */
   ${media.md`
     width: 600px;
 `}

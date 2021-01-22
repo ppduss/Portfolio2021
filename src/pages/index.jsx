@@ -9,9 +9,7 @@ import About from '../components/about';
 import SEO from "../components/seo";
 import Theme from '../Theme';
 import Divider from '../components/Divider';
-// import Modal from '../components/modal/modal';
 import mars from '../images/tmwn.jpeg';
-// import Maze from '../components/Maze';
 import media from '../media';
 
 
@@ -22,30 +20,31 @@ const Main = styled.div`
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 500;
   padding: 30px;
-
 `;
 const TopContainer = styled.div`
   background-color: ${({ theme: { colors } }) => colors.greenstone};
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  height: 450px;
+  height: 500px;
   z-index: 2;
-
-  /* width: 100vw; */
-  margin-top: 80px;
+  /* margin-top: 100px; */
 `;
 const ProfileContainer = styled.div`
-  background-color: ${({ theme: { colors } }) => colors.greenstone};
+  /* background-color: ${({ theme: { colors } }) => colors.greenstone}; */
   display: flex;
   flex-direction: column;
+  margin-left: 20px;
 `;
-
+const CollageAboutContainer = styled.div` 
+  display: flex;
+  flex-direction: column;
+  margin-top: 300px;
+`;
 
 const SplitContainer = styled.div`
   background-color: ${({ theme: { colors } }) => colors.butter};
   display: flex;
-  margin-top: 100px;
 `;
 const ContainerLeft = styled.div`
   /* display:flex;
@@ -68,8 +67,9 @@ const ContainerRight = styled.div`
 `;
 
 const TopSVG = styled.svg`
-  margin-top: -60px;
-  `;
+  /* margin-top: -20px; */
+  transform: scaleX(-1);
+`;
 
 
 const IndexPage = () => (
@@ -83,10 +83,14 @@ const IndexPage = () => (
           <p>Check me out</p>
           <Portrait />
         </ProfileContainer>
-        <Collage /> 
-        
+        <CollageAboutContainer>
+          
+          <About/><Collage /> 
+        </CollageAboutContainer>
       </TopContainer>
-      <TopSVG xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#bbd1c9" fill-opacity="1" d="M0,320L720,256L1440,64L1440,0L720,0L0,0Z"></path></TopSVG>
+      {/* <TopSVG xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#bbd1c9" fill-opacity="1" d="M0,320L720,256L1440,64L1440,0L720,0L0,0Z"></path></TopSVG> */}
+      {/* <TopSVG xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#bbd1c9" fill-opacity="1" d="M0,32L1440,288L1440,0L0,0Z"></path></TopSVG> */}
+      <TopSVG xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#bbd1c9" fill-opacity="1" d="M0,32L480,64L960,320L1440,224L1440,0L960,0L480,0L0,0Z"></path></TopSVG>
       
       <SplitContainer>
         <ContainerLeft>
@@ -96,7 +100,6 @@ const IndexPage = () => (
         </ContainerLeft>
         <Divider/>
         <ContainerRight>
-          <About/>
           
           <h5>Projects</h5>
 
@@ -106,7 +109,7 @@ const IndexPage = () => (
           <Project title={"Ratatap Drum Pad"} subTitle={"A clone of the patatap.com drum pads using my favorite samples."} previewImg={"tmwn"} liveLink={'https://ppduss.github.io/Ratatap/'} ghLink={"https://github.com/ppduss/Ratatap"} projSkills={['HTML5', 'CSS3', 'JS', 'Paper.js', 'Howler.js']} />  
         </ContainerRight>
       </SplitContainer>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,32L720,320L1440,160L1440,320L720,320L0,320Z"></path></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#bbd1c9" fill-opacity="1" d="M0,32L720,320L1440,160L1440,320L720,320L0,320Z"></path></svg>
     </Main>
     
     </Theme>

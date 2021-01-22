@@ -1,10 +1,15 @@
 import React from "react";
 import styled from "styled-components";
+import Theme from '../Theme';
+import media from '../media';
+
 
 const AboutTxt = styled.p`
-  background-color: #f3f3f3;
-  /* color: white; */
-  width: 50vw;
+  background-color: ${({ theme: { colors } }) => colors.twilight};
+  border-radius: 15px;
+  color: white;
+  width: 38vw;
+  padding: 20px;
   `;
 
 const About = () => (
