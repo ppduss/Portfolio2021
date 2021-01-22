@@ -4,6 +4,7 @@ import styled from "styled-components";
 const AboutTxt = styled.p`
   background-color: #f3f3f3;
   /* color: white; */
+  width: 50vw;
   `;
 
 const About = () => (

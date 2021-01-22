@@ -5,7 +5,7 @@ import media from '../media';
 
 const PortImg = styled.img`
   width: 220px;
-  border-radius: 50%;
+  border-radius: 100%;
   ${media.md`
     width: 280px;
 `}

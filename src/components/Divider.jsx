@@ -1,10 +1,12 @@
 import React from 'react';
 import styled, { keyframes, css } from 'styled-components';
+import media from '../media';
+
 
 const lineanim = keyframes`
   from {
     height: 0;
-    opacity: 0;
+    opacity: 1;
   }
   to {
     height: 1500;
@@ -16,12 +18,17 @@ const Line = styled.line`
  stroke: black;
  stroke-width: 5;
  `;
+
 const Svg = styled.svg`
 margin-top: -100px;
  opacity: 0;
- animation: ${lineanim} 9s cubic-bezier(0,0.97,.53,1) forwards;
+ animation: ${lineanim} 5s cubic-bezier(.41,.99,.74,.95) forwards;
  animation-iteration-count: 1;
- animation-delay: 500ms;
+ animation-delay: 1000ms;
+ display: none;
+  ${media.md`
+    display: block;
+`}
 `;
 
 const Divider = () => (

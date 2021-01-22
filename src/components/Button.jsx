@@ -1,19 +1,22 @@
 import React from 'react';
 import styled from 'styled-components';
+import Theme from '../Theme';
+import media from '../media';
 
 const StyledButton = styled.button`
-  background-color: rgb(250, 247, 241);
-  font-size: 0.7rem;
-  border: 1px solid black;
-  border-radius: 3px;
   margin: 16px 10px 0px 0px;
-  padding: 5px 10px;
+  padding: 10px 15px;
   text-align: center;
   align-self: right;
+  color: ${({ theme: { colors } }) => colors.white};
+  background-color: ${({ theme: { colors } }) => colors.twilight};
+  font-size: 0.8rem;
+  border: none;
+  border-radius: 3px;
+  text-transform: uppercase;
   outline: none;
   box-shadow: none;
- &:focus {
-    /* border: 2px solid red; */
+  &:focus {
   }
   &:visited {
     border-color: grey;
@@ -26,18 +29,9 @@ const StyledButton = styled.button`
     border: 1px solid grey;
     outline: none;
   }
-  @media (min-width: 480px){
-    /* font-size: 0.7rem; */
-  }
-  @media (min-width: 768px){
-      font-size: 0.8rem;
-      margin: 10px 8px 0px 0px;
-  }
-  @media (min-width: 992px){
-  }
-  @media (min-width: 1200px){
-      font-size: 0.9rem;
-  }
+  ${media.xl`
+
+`}
 `;
 
 const Button = ({ goto, children }) => {
