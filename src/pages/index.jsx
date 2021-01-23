@@ -12,6 +12,7 @@ import Divider from '../components/Divider';
 import mars from '../images/tmwn.jpeg';
 import media from '../media';
 import GlobalStyle from '../globalStyles';
+import Footer from "../components/Footer";
 
 
 const Main = styled.div`
@@ -102,7 +103,7 @@ const IndexPage = () => (
           <Portrait />
         </ProfileContainer>
         <CollageAboutContainer>
-          <About />
+          
           <Collage /> 
         </CollageAboutContainer>
       </TopContainer>
@@ -127,7 +128,9 @@ const IndexPage = () => (
           <Project title={"Ratatap Drum Pad"} subTitle={"A clone of the patatap.com drum pads using my favorite samples."} previewImg={"tmwn"} liveLink={'https://ppduss.github.io/Ratatap/'} ghLink={"https://github.com/ppduss/Ratatap"} projSkills={['HTML5', 'CSS3', 'JS', 'Paper.js', 'Howler.js']} />  
         </ContainerRight>
       </SplitContainer>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#bbd1c9" fill-opacity="1" d="M0,32L720,320L1440,160L1440,320L720,320L0,320Z"></path></svg>
+      {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#bbd1c9" fill-opacity="1" d="M0,32L720,320L1440,160L1440,320L720,320L0,320Z"></path></svg> */}
+      <About />
+      <Footer/>
     </Main>
     
     </Theme>
