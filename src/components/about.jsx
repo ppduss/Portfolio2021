@@ -5,9 +5,8 @@ import media from '../media';
 import aboutImg from '../images/tempimg.png';
 
 const AboutContainer = styled.div`
-  background-color: ${({ theme: { colors } }) => colors.twilight};
+  background-color: ${({ theme: { colors } }) => colors.darkshadyblue};
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding-top: 160px;
@@ -15,36 +14,38 @@ const AboutContainer = styled.div`
 `;
 
 const AboutTitle = styled.h1`
-  color: ${({ theme: { colors } }) => colors.white};
+font-size: 4rem;
+  color: ${({ theme: { colors } }) => colors.black};
+  margin-left: -30px;
+  margin-top: -30px;
+  z-index: 5;
 `;
 
 const AboutSecondContainer = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
 `;
 
 const AboutImg = styled.img`
-  /* margin-top: 180px; */
   filter: grayscale(100);
   width: 400px;
 `;
 
 const AboutTxt = styled.p`
-  background-color: ${({ theme: { colors } }) => colors.twilight};
+  background-color: ${({ theme: { colors } }) => colors.darkshadyblue};
   border-radius: 15px;
-  /* margin-top: 280px; */
-  color: white;
-  width: 350px;
+  margin-left: 30px;
+  color: ${({ theme: { colors } }) => colors.black};
+  width: 475px;
   height: 400px;
   padding: 20px;
 `;
 
 const About = () => (
   <AboutContainer>
-    <AboutTitle>About<br />me</AboutTitle>
+    <AboutImg src={aboutImg}/>
     <AboutSecondContainer>
-      <AboutImg src={aboutImg}/>
+      <AboutTitle>About<br />me</AboutTitle>
       <AboutTxt>I'm a front-end developer based in Montreal who loves creating beautiful and engaging websites built with elegant code. Always interested in exploring new and creative ways to improve efficiency user experience. I also have experience with 2D/3D modeling for manufacturing, 3D printing, CNC programming, and photography editing.</AboutTxt>
     </AboutSecondContainer>
   </AboutContainer>

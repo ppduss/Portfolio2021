@@ -14,7 +14,6 @@ import media from '../media';
 import GlobalStyle from '../globalStyles';
 import Footer from "../components/Footer";
 
-
 const Main = styled.div`
   background-color: ${({ theme: { colors } }) => colors.butter};
   display: flex;
@@ -90,7 +89,6 @@ const TopSVG = styled.svg`
 
 
 const IndexPage = () => (
-  
   <Theme>
     <GlobalStyle/>
     <SEO title="Patrick Dussault" />
