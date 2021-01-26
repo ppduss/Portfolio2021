@@ -15,7 +15,7 @@ import GlobalStyle from '../globalStyles';
 import Footer from "../components/Footer";
 
 const Main = styled.div`
-  background-color: ${({ theme: { colors } }) => colors.butter};
+  background-color: ${({ theme: { colors } }) => colors.lightbutter};
   display: flex;
   flex-direction: column;
   font-family: 'Source Sans Pro', sans-serif;
@@ -25,11 +25,11 @@ const Main = styled.div`
 const TopContainer = styled.div`
   background-color: ${({ theme: { colors } }) => colors.greenstone};
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  height: 350px;
+  height: 500px;
   z-index: 2;
-  margin: 80px 30px 0 30px;
+  margin: 0px 0px 0px 0px;
 
 `;
 const ProfileContainer = styled.div`
@@ -38,30 +38,12 @@ const ProfileContainer = styled.div`
   flex-direction: column;
   margin-left: 5vw;
   margin-top: 200px;
-
-`;
-const CollageAboutContainer = styled.div` 
-  display: flex;
-  flex-direction: column;
-  margin-top: 140px;
-  margin-right: 1vw;
-  ${media.md`
-    margin-top: 140px;
-
-  `}
-  ${media.lg`
-    margin-top: 600px;
-
-  `}
-  ${media.xl`
-    margin-top: 500px;
-  `}
 `;
 
 const SplitContainer = styled.div`
-  background-color: ${({ theme: { colors } }) => colors.butter};
+  background-color: ${({ theme: { colors } }) => colors.twilight};
   display: flex;
-  margin-top: 180px;
+  /* margin-top: 180px; */
 `;
 const ContainerLeft = styled.div`
   /* display:flex;
@@ -70,10 +52,9 @@ const ContainerLeft = styled.div`
   /* ${media.lg`
     width: 190px;
   `} */
-
 `;
 const ContainerRight = styled.div`
-  background-color: ${({ theme: { colors } }) => colors.butter};
+  background-color: ${({ theme: { colors } }) => colors.twilight};
   margin-left: 12vw;
   width: 70vw;
   /* display: flex;
@@ -83,10 +64,16 @@ const ContainerRight = styled.div`
 
 const TopSVG = styled.svg`
   /* margin-top: -20px; */
-  transform: scaleX(-1);
-  margin: 0 30px;
+  transform: scaleX(-1); 
+  /* translate: (0, -100); */
+  /* margin: 0 30px; */
 `;
-
+const SecSVG = styled.svg`
+  /* margin-top: -20px; */
+  transform: scaleX(-1); 
+  translate: (0, -100);
+  /* margin: 0 30px; */
+`;
 
 const IndexPage = () => (
   <Theme>
@@ -100,14 +87,14 @@ const IndexPage = () => (
           <p>Check me out</p>
           <Portrait />
         </ProfileContainer>
-        <CollageAboutContainer>
-          
-          <Collage /> 
-        </CollageAboutContainer>
+        <Collage /> 
+      
       </TopContainer>
+      <TopSVG xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#bbd1c9" fill-opacity="1" d="M0,32L480,64L960,320L1440,224L1440,0L960,0L480,0L0,0Z"></path></TopSVG> 
       {/* <TopSVG xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#bbd1c9" fill-opacity="1" d="M0,320L720,256L1440,64L1440,0L720,0L0,0Z"></path></TopSVG> */}
-      {/* <TopSVG xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#bbd1c9" fill-opacity="1" d="M0,32L1440,288L1440,0L0,0Z"></path></TopSVG> */}
-      <TopSVG xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#bbd1c9" fill-opacity="1" d="M0,32L480,64L960,320L1440,224L1440,0L960,0L480,0L0,0Z"></path></TopSVG>
+      {/* <SecSVG xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#2f5a62" fill-opacity="1" d="M0,32L1440,288L1440,0L0,0Z"></path></SecSVG> */}
+      <SecSVG xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#2f5a62" fill-opacity="1" d="M0,32L480,64L960,320L1440,224L1440,0L960,0L480,0L0,0Z"></path></SecSVG>
+
       
       <SplitContainer>
         <ContainerLeft>

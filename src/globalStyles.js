@@ -125,7 +125,7 @@ img {
   margin-bottom: 1.45rem;
 }
 svg:not(:root) {
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 code,
 kbd,

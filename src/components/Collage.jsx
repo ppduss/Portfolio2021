@@ -8,11 +8,9 @@ const ImgContainer = styled.div`
   display: none;
   /* top: -90px;
   right: 2vw; */
-  margin-top: 40px;
-  ${media.lg`
+  margin-top: 500px;
+  ${media.md`
   display: block;
-   
-
   `}
 `
 
