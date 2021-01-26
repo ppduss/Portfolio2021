@@ -8,11 +8,12 @@ const StyledButton = styled.button`
   padding: 10px 15px;
   text-align: center;
   align-self: right;
-  color: ${({ theme: { colors } }) => colors.white};
-  background-color: ${({ theme: { colors } }) => colors.twilight};
+  color: ${({ theme: { colors } }) => colors.black};
+  background-color: ${({ theme: { colors } }) => colors.greenstone};
+  border: 2px solid ${({ theme: { colors } }) => colors.twilight};
   font-size: 0.8rem;
-  border: none;
-  border-radius: 3px;
+  /* border: none; */
+  border-radius: 4px;
   text-transform: uppercase;
   outline: none;
   box-shadow: none;

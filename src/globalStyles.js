@@ -255,6 +255,7 @@ textarea {
   box-sizing: inherit;
 }
 h2 {
+  color: #fff;
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -263,12 +264,12 @@ h2 {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-  color: inherit;
+  /* color: inherit; */
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 1.62671rem;
+  font-size: 2.2rem;
   line-height: 1.1;
 }
 h3 {

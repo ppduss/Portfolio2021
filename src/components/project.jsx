@@ -7,9 +7,9 @@ import media from '../media';
 const Proj = styled.div`
   background-color: ${({ theme: { colors } }) => colors.white};
   /* border: 1px solid black; */
-  border-top: 3px solid ${({ theme: { colors } }) => colors.black};
+  border-top: 2px solid ${({ theme: { colors } }) => colors.black};
   margin-bottom: 60px;
-  margin-top: 80px;
+  /* margin-top: 80px; */
   font-weight: 400;
   font-size: 0.8em;
   max-width: 850px;
@@ -19,12 +19,12 @@ const Proj = styled.div`
 const Title = styled.h4` 
   display: flex;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   width: 105%;
-  color: ${({ theme: { colors } }) => colors.white};
+  color: ${({ theme: { colors } }) => colors.black};
   font-weight: 600;
-  background-color:${({ theme: { colors } }) => colors.twilight};
-  padding-left: 10px;
+  background-color:${({ theme: { colors } }) => colors.darkshadyblue};
+  padding-left: 18px;
   word-break: normal;
   margin: 0px;
   height: 50px;
@@ -32,9 +32,9 @@ const Title = styled.h4`
 const Subtitle = styled.p`
   /* display: relative;   */
   width: 70%;
-  padding: 10px;
+  padding: 18px;
   word-break: normal;
-  background-color: ${({ theme: { colors } }) => colors.greenstone};
+  /* background-color: ${({ theme: { colors } }) => colors.lightbutter}; */
 
 `;
 
@@ -52,7 +52,7 @@ const SecondContainer = styled.div`
 `;
 
 const Tools = styled.div`
-  background-color: ${({ theme: { colors } }) => colors.clay};
+  /* background-color: ${({ theme: { colors } }) => colors.clay}; */
   display: flex;
   /* width: 30%; */
   min-width: 120px;

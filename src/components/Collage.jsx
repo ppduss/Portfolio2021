@@ -9,6 +9,7 @@ const ImgContainer = styled.div`
   /* top: -90px;
   right: 2vw; */
   margin-top: 500px;
+  margin-right: 6vw;
   ${media.md`
   display: block;
   `}

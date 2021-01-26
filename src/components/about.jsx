@@ -5,7 +5,7 @@ import media from '../media';
 import aboutImg from '../images/tempimg.png';
 
 const AboutContainer = styled.div`
-  background-color: ${({ theme: { colors } }) => colors.darkshadyblue};
+  background-color: ${({ theme: { colors } }) => colors.twilight};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,7 +32,7 @@ const AboutImg = styled.img`
 `;
 
 const AboutTxt = styled.p`
-  background-color: ${({ theme: { colors } }) => colors.darkshadyblue};
+  /* background-color: ${({ theme: { colors } }) => colors.twilight}; */
   border-radius: 15px;
   margin-left: 30px;
   color: ${({ theme: { colors } }) => colors.black};

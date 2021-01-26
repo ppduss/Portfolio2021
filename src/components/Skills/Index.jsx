@@ -6,7 +6,7 @@ import ReactIcon from '../../images/skills/react_icon.png'
 
 
 const TopSkills = styled.div`
-  background-color: ${({ theme: { colors } }) => colors.twilight};
+  background-color: ${({ theme: { colors } }) => colors.lightbutter};
   margin-bottom: 200px;
   display: flex;
   flex-direction: column;
