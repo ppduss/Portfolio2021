@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components";
-import portrait from '../images/portrait3.png'
 import media from '../media';
 
 const PortImg = styled.img`

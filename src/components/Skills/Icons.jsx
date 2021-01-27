@@ -30,16 +30,18 @@ const IconContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 18vw;
+  width: 8vw;
   margin-top: 30px;
-`
+  ${media.lg`
+    width: 18vw;
+  `}
+`;
 const IconName = styled.p`
   top: 2px;
   left: 14vw;
   position: absolute;
   transition: all 200ms ease;
   opacity: 0;
-  /* display: none; */
   ${IconContainer}:hover & {
     /* animation: ${drop} 400ms cubic-bezier(.41,.99,.74,.95) forwards;
     animation-iteration-count: 1;
@@ -48,6 +50,7 @@ const IconName = styled.p`
     opacity: 1;
     transition: all 300ms ease 400ms;
   }
+
 `;
 
 const Icon = styled.img`

@@ -1,50 +1,59 @@
 import styled, { keyframes, css } from "styled-components";
 import React from "react";
 import Button from "./Button";
-import Theme from '../Theme';
 import media from '../media';
 
+
+
 const Proj = styled.div`
-  background-color: ${({ theme: { colors } }) => colors.white};
-  /* border: 1px solid black; */
+  display: flex;  
+  justify-content: space-between;
+  background-color:${
+    (props) => props.projectTheme === 'mars' ? ({ theme: { colors } }) => colors.twilight :
+    props.projectTheme === 'coffee' ? ({ theme: { colors } }) => colors.lshadyblue :
+    props.projectTheme === 'ratatap' ? ({ theme: { colors } }) => colors.black :
+    props.projectTheme === 'rgb' ? ({ theme: { colors } }) => colors.clay : 'black' };
   border-top: 2px solid ${({ theme: { colors } }) => colors.black};
   margin-bottom: 60px;
   /* margin-top: 80px; */
+  height: 360px;
   font-weight: 400;
   font-size: 0.8em;
   max-width: 850px;
   /* padding: 20px, 20px, 20px, 20px; */
 `;
 
-const Title = styled.h4` 
+  const Title = styled.h4` 
   display: flex;
   align-items: center;
   font-size: 1.2rem;
   width: 105%;
-  color: ${({ theme: { colors } }) => colors.black};
+  color: ${({ theme: { colors } }) => colors.white};
   font-weight: 600;
-  background-color:${({ theme: { colors } }) => colors.darkshadyblue};
+  background-color:${
+    (props) => props.projectTheme === 'mars' ? ({ theme: { colors } }) => colors.twilight2 :
+    props.projectTheme === 'coffee' ? ({ theme: { colors } }) => colors.dshadyblue :
+    props.projectTheme === 'ratatap' ? ({ theme: { colors } }) => colors.black :
+    props.projectTheme === 'rgb' ? ({ theme: { colors } }) => colors.clay : 'black' };
   padding-left: 18px;
   word-break: normal;
   margin: 0px;
   height: 50px;
 `;
+
 const Subtitle = styled.p`
+  color: ${({ theme: { colors } }) => colors.white};
+  font-size: 0.95rem;
   /* display: relative;   */
-  width: 70%;
+  /* width: 70%; */
   padding: 18px;
   word-break: normal;
-  /* background-color: ${({ theme: { colors } }) => colors.lightbutter}; */
+  /* background-color: ${({ theme: { colors } }) => colors.lbutter}; */
 
 `;
 
-const FirstContainer = styled.div`
-  display: flex;  
-  justify-content: space-between;
-  /* margin-left: 10px; */
-  /* margin-bottom: 0px; */
-`;
-const SecondContainer = styled.div`  
+
+const FirstContainer = styled.div`  
   /* display: flex;
   flex-direction: column;
   justify-content: space-around; */
@@ -60,18 +69,20 @@ const Tools = styled.div`
 `;
 
 const Preview = styled.img`
-  width: 300px;
+  max-width: auto;
+  max-height: auto;
   margin-bottom: 0;
 `;
 
-const Project = ({title, subTitle, previewImg, ghLink, liveLink, projSkills}) => {
+
+
+const Project = ({title, subTitle, previewImg, ghLink, liveLink, projSkills, projTheme}) => {
   
   return (
-    <Proj>
-      <FirstContainer>
-        <SecondContainer>
-          <Title>{title}</Title>
-          <Subtitle>{subTitle}</Subtitle>
+    <Proj projectTheme={projTheme}>
+        <FirstContainer>
+          <Title projectTheme={projTheme}>{title}</Title>
+          <Subtitle projectTheme={projTheme}>{subTitle}</Subtitle>
           <Tools>
           {projSkills.map((s, i) => {
             return (
@@ -81,10 +92,9 @@ const Project = ({title, subTitle, previewImg, ghLink, liveLink, projSkills}) =>
           </Tools>
           <Button goto={liveLink}>View Live</Button>
           <Button goto={ghLink}>View on GitHub</Button>
-        </SecondContainer>
+        </FirstContainer>
         
         <Preview src={previewImg}/>
-      </FirstContainer> 
     </Proj>
 
   )};
