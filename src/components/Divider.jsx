@@ -17,6 +17,8 @@ const lineanim = keyframes`
 const Line = styled.line`
  stroke: black;
  stroke-width: 5;
+ z-index: 0;
+
  `;
 
 const Svg = styled.svg`
@@ -26,6 +28,7 @@ const Svg = styled.svg`
  animation-iteration-count: 1;
  animation-delay: 1000ms;
  display: none;
+ z-index: 0;
   ${media.md`
     display: block;
 `}

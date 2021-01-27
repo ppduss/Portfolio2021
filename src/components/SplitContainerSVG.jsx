@@ -1,0 +1,23 @@
+import React from 'react';
+import styled, { keyframes, css } from 'styled-components';
+import media from '../media';
+
+const SVG = styled.svg`
+  /* margin-top: -20px; */
+  transform: scale(1, -1); 
+  /* translate: (0, -100); */
+  /* margin: 0 30px; */
+`;
+
+const TopSVG = () => (
+
+<SVG xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff8ef" fill-opacity="1" d="M0,400L450,264L960,320L1440,224L1440,0L960,0L480,0L0,0Z"></path></SVG>
+
+);
+
+export default TopSVG;
+
+
+      {/* <TopSVG xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#bbd1c9" fill-opacity="1" d="M0,320L720,256L1440,64L1440,0L720,0L0,0Z"></path></TopSVG> */}
+      {/* <SecSVG xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#a7bdd1" fill-opacity="1" d="M0,32L1440,288L1440,0L0,0Z"></path></SecSVG> */}
+      {/* <SecSVG xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#a7bdd1" fill-opacity="1" d="M0,32L480,64L960,320L1440,224L1440,0L960,0L480,0L0,0Z"></path></SecSVG> */}
