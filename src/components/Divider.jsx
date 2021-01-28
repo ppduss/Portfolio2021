@@ -29,7 +29,7 @@ const Svg = styled.svg`
  animation-delay: 1000ms;
  display: none;
  z-index: 0;
-  ${media.md`
+  ${media.lg`
     display: block;
 `}
 `;

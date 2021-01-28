@@ -7,18 +7,23 @@ import portrait from '../images/portrait3.png'
 const ProfileContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin-left: 12vw;
+  margin-top: 250px;
+  align-items: center;
+  ${media.md`
+  justify-content: space-between;
   margin-top: 400px;
+  margin-left: 12vw;
+`}
 `;
 
 const PortImg = styled.img`
   width: 200px;
   border-radius: 35%;
   ${media.md`
-    width: 220px;
+    width: 200px;
 `}
   ${media.xl`
-    width: 280px;
+    width: 260px;
 `}
 `
 

@@ -8,10 +8,10 @@ import About from '../components/about';
 import SEO from "../components/seo";
 import Theme from '../Theme';
 import Divider from '../components/Divider';
-import mars from '../images/tmwn.jpeg';
-import coffee from '../images/coffee2.png';
-import rgb from '../images/rgb2.png';
-import ratatap from '../images/ratatap2.png';
+import mars from '../images/mars3.png';
+import coffee from '../images/coffee3.png';
+import rgb from '../images/rgb3.png';
+import ratatap from '../images/ratatap3.png';
 import media from '../media';
 import GlobalStyle from '../globalStyles';
 import Footer from "../components/Footer";
@@ -29,19 +29,23 @@ const Main = styled.div`
 const TopContainer = styled.div`
   background-color: ${({ theme: { colors } }) => colors.twilight};
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  height: 400px;
+  height: 450px;
   z-index: 5;
   margin: 0px 0px 0px 0px;
+  ${media.md`
+  justify-content: space-between;
 
+`}
 `;
 
 const SplitContainer = styled.div`
   background-color: ${({ theme: { colors } }) => colors.lbutter};
   display: flex;
   flex-direction: column;
-  ${media.md`
+  padding-top:100px;
+  ${media.lg`
   flex-direction: row;
 `}
 
@@ -49,11 +53,10 @@ const SplitContainer = styled.div`
 
 
 const ContainerLeft = styled.div`
-  width: 100vw;
-    display: flex;
+  display: flex;
   flex-direction: column; 
   align-items: center;
-  ${media.md`
+  ${media.lg`
   width: 18vw; //must be controlled in conjct. with IconContainer
     
 `}

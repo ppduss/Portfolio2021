@@ -20,7 +20,7 @@ const TopSkills = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-    ${media.md`
+    ${media.lg`
     margin-bottom: 200px;
     flex-direction: column;
 `}

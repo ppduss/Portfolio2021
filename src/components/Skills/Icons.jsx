@@ -37,31 +37,36 @@ const IconContainer = styled.div`
   `}
 `;
 const IconName = styled.p`
-  top: 2px;
-  left: 14vw;
   position: absolute;
   transition: all 200ms ease;
   opacity: 0;
+  margin-top: 60px;
   ${IconContainer}:hover & {
-    /* animation: ${drop} 400ms cubic-bezier(.41,.99,.74,.95) forwards;
-    animation-iteration-count: 1;
-    animation-delay: 500ms; */
-    /* display: block; */
     opacity: 1;
     transition: all 300ms ease 400ms;
-  }
+  };
+  ${media.lg`
+  margin-top: 0;
+  position: absolute;
+  top: 2px;
+  left: 14vw;
+  `} 
 
 `;
 
 const Icon = styled.img`
   width: 50px;
   position: absolute;
-  ${media.lg`
-    width: 65px;
+  ${media.xl`
+    width: 60px;
   `}
 `;
 const SVGContainer = styled.div`
-  margin-top: 70px;
+  margin-top: 75px;
+  opacity: 0;
+  ${media.lg`
+    opacity: 1;
+  `}
 `;
 
 const SVGicon = styled.svg`
@@ -69,17 +74,20 @@ const SVGicon = styled.svg`
   left: 50%;
   width: 0px;
   height: 0px; 
-  /* background-color: #ffffff; */
   position: absolute;
   ${IconContainer}:hover & {
     animation: ${lineanim} 400ms cubic-bezier(.41,.99,.74,.95) forwards;
     animation-iteration-count: 1;
     animation-delay: 300ms;
-  }
+  };
+  ${media.xl`
+    top: 28px;
+  `}
 `;
+
 const Line = styled.line`
- stroke: black;
- stroke-width: 5;
+  stroke: black;
+  stroke-width: 5;
 `;
 
 const Skill = ({ src, name }) => (

@@ -15,6 +15,7 @@ const theme = {
     shadyblue: '#acbece',
     dshadyblue: '#a7bdd1',
     black: '#000',
+    grey: '#313131',
     white: '#fff',
   },
   fonts: ["sans-serif", "Roboto"],
