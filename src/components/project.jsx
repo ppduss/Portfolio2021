@@ -8,13 +8,13 @@ const Proj = styled.div`
   flex-direction: column;
   justify-content: space-between;
   background-color:${
-    (props) => props.projectTheme === 'mars' ? ({ theme: { colors } }) => colors.twilight :
+    (props) => props.projectTheme === 'mars' ? ({ theme: { colors } }) => colors.butter :
     props.projectTheme === 'coffee' ? ({ theme: { colors } }) => colors.lshadyblue :
-    props.projectTheme === 'ratatap' ? ({ theme: { colors } }) => colors.black :
-    props.projectTheme === 'rgb' ? ({ theme: { colors } }) => colors.clay : 'black' };
+    props.projectTheme === 'ratatap' ? ({ theme: { colors } }) => colors.greypoupon :
+    props.projectTheme === 'rgb' ? ({ theme: { colors } }) => colors.butter : 'black' };
   /* border-top: 2px solid ${({ theme: { colors } }) => colors.grey}; */
   margin-bottom: 190px;
-  /* margin-top: 80px; */
+  border: 1px solid ${({ theme: { colors } }) => colors.twilight};
   height: 300px;
   font-weight: 400;
   font-size: 0.8em;
@@ -55,9 +55,9 @@ const Proj = styled.div`
   color: ${({ theme: { colors } }) => colors.white};
   font-weight: 600;
   background-color:${
-    (props) => props.projectTheme === 'mars' ? ({ theme: { colors } }) => colors.twilight2 :
-    props.projectTheme === 'coffee' ? ({ theme: { colors } }) => colors.dshadyblue :
-    props.projectTheme === 'ratatap' ? ({ theme: { colors } }) => colors.black :
+    (props) => props.projectTheme === 'mars' ? ({ theme: { colors } }) => colors.twilight:
+    props.projectTheme === 'coffee' ? ({ theme: { colors } }) => colors.twilight :
+    props.projectTheme === 'ratatap' ? ({ theme: { colors } }) => colors.twilight:
     props.projectTheme === 'rgb' ? ({ theme: { colors } }) => colors.twilight : 'black' };
   padding-left: 18px;
   word-break: normal;
@@ -66,10 +66,9 @@ const Proj = styled.div`
 `;
 
 const Subtitle = styled.p`
-  color: ${({ theme: { colors } }) => colors.white};
-  font-size: 0.95rem;
+  color: ${({ theme: { colors } }) => colors.black};
+  font-size: 0.9rem;
   /* display: relative;   */
-  /* width: 70%; */
   padding: 18px;
   word-break: normal;
   /* background-color: ${({ theme: { colors } }) => colors.lbutter}; */
@@ -78,10 +77,7 @@ const Subtitle = styled.p`
 
 
 const FirstContainer = styled.div`  
-  /* display: flex;
-  flex-direction: column;
-  justify-content: space-around; */
-  /* padding: 0; */
+  width: 100%;
 `;
 
 const Tools = styled.div`
@@ -98,7 +94,7 @@ const Preview = styled.img`
   margin-bottom: 0;
   /* border-bottom: 4px solid ${({ theme: { colors } }) => colors.twilight};
   border-right: 4px solid ${({ theme: { colors } }) => colors.twilight};
-  border-left: 4px solid ${({ theme: { colors } }) => colors.twilight}; */
+  border-left: 4px solid ${({ theme: { colors } }) => colors.twilight};*/
 `;
 
 

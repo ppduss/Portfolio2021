@@ -37,6 +37,7 @@ const IconContainer = styled.div`
   `}
 `;
 const IconName = styled.p`
+  font-size: 0.9rem;
   position: absolute;
   transition: all 200ms ease;
   opacity: 0;
@@ -49,7 +50,11 @@ const IconName = styled.p`
   margin-top: 0;
   position: absolute;
   top: 2px;
-  left: 14vw;
+  left: 12vw;
+  `} 
+  ${media.xl`
+  font-size: 1rem;
+  left: 12.5vw;
   `} 
 
 `;
