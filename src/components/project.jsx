@@ -13,14 +13,15 @@ const Proj = styled.div`
     props.projectTheme === 'ratatap' ? ({ theme: { colors } }) => colors.greypoupon :
     props.projectTheme === 'rgb' ? ({ theme: { colors } }) => colors.butter : 'black' };
   /* border-top: 2px solid ${({ theme: { colors } }) => colors.grey}; */
-  margin-bottom: 190px;
+  margin-bottom: 160px;
   border: 1px solid ${({ theme: { colors } }) => colors.twilight};
-  height: 300px;
+  border-radius: 2px;
+  height: 320px;
   font-weight: 400;
   font-size: 0.8em;
   width: 70%;
   max-width: 900px;
-  
+
   /* ${media.xs`
     height: 600px;
     width: 600px;
@@ -54,7 +55,7 @@ const TitleContainer = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  height: 50px;
+  min-height: 15%;
   width: 100%;
   background-color:${
     (props) => props.projectTheme === 'mars' ? ({ theme: { colors } }) => colors.twilight:
@@ -67,7 +68,7 @@ const TitleContainer = styled.div`
   font-size: 1.2rem;
   color: ${({ theme: { colors } }) => colors.white};
   font-weight: 600;
-  padding-left: 24px;
+  padding-left: 30px;
   /* word-break: normal; */
   margin: 0px;
 `;
@@ -75,32 +76,30 @@ const TitleContainer = styled.div`
 const Subtitle = styled.p`
   color: ${({ theme: { colors } }) => colors.black};
   font-size: 0.9rem;
-  /* display: relative;   */
-  padding: 18px;
   word-break: normal;
-  /* background-color: ${({ theme: { colors } }) => colors.lbutter}; */
-
+  margin-bottom: 2rem;
 `;
 
 
 const Content = styled.div`  
   width: 100%;
+  height: 85%;
   display: flex;
+  align-items: center;
   justify-content: space-between;
 `;
 
 const Tools = styled.div`
   /* background-color: ${({ theme: { colors } }) => colors.twilight}; */
   display: flex;
-  /* width: 30%; */
   min-width: 120px;
-  padding: 10px;
+  margin-bottom: 2rem;
 `;
 
 const Preview = styled.img`
-  width: 20%;
-  max-width: auto;
-  max-height: auto;
+  height: 100%;
+  /* max-width: auto; */
+  /* max-height: auto; */
   margin-bottom: 0;
   /* border-bottom: 4px solid ${({ theme: { colors } }) => colors.twilight};
   border-right: 4px solid ${({ theme: { colors } }) => colors.twilight};
@@ -108,7 +107,8 @@ const Preview = styled.img`
 `;
 
 const Details = styled.div`
-
+  width: 60%;
+  padding: 30px;
 `;
 
 const Project = ({title, subTitle, previewImg, ghLink, liveLink, projSkills, projTheme}) => {
@@ -124,15 +124,17 @@ const Project = ({title, subTitle, previewImg, ghLink, liveLink, projSkills, pro
           <Tools>
           {projSkills.map((s, i) => {
             return (
-              <div key={i + s}>{s} &nbsp;</div>
+              <div key={i + s}>{s} &nbsp;&nbsp;</div>
             )
           })}
           </Tools>
-          <Button goto={liveLink}>View Live</Button>
-          <Button goto={ghLink}>View on GitHub</Button>
+          <div>
+            <Button goto={liveLink}>View Live</Button>
+            <Button goto={ghLink}>View Repo</Button>
+          </div>
         </Details>
         <Preview src={previewImg}/>
-        </Content>
+      </Content>
     </Proj>
 
   )};

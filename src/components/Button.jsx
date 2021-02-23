@@ -4,16 +4,17 @@ import Theme from '../Theme';
 import media from '../media';
 
 const StyledButton = styled.button`
-  margin: 16px 10px 0px 0px;
-  padding: 10px 15px;
+  width: 125px;
+  margin-right: 15px;
+  padding: 8px 10px;
   text-align: center;
   align-self: right;
   color: ${({ theme: { colors } }) => colors.black};
-  background-color: ${({ theme: { colors } }) => colors.greenstone};
-  border: 2px solid ${({ theme: { colors } }) => colors.twilight};
+  background-color: ${({ theme: { colors } }) => colors.white};
+  border: 1px solid ${({ theme: { colors } }) => colors.black};
   font-size: 0.8rem;
   /* border: none; */
-  border-radius: 4px;
+  border-radius: 3px;
   text-transform: uppercase;
   outline: none;
   box-shadow: none;
