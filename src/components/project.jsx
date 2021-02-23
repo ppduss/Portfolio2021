@@ -18,7 +18,10 @@ const Proj = styled.div`
   height: 300px;
   font-weight: 400;
   font-size: 0.8em;
-  ${media.xs`
+  width: 70%;
+  max-width: 900px;
+  
+  /* ${media.xs`
     height: 600px;
     width: 600px;
     margin-bottom: 60px;
@@ -44,25 +47,29 @@ const Proj = styled.div`
   ${media.xl`
     height: 400px;
     max-width: 980px;
-`}
+`} */
 `;
 
-  const Title = styled.h4` 
+const TitleContainer = styled.div`
   display: flex;
+  justify-content: flex-start;
   align-items: center;
-  font-size: 1.2rem;
-  width: 105%;
-  color: ${({ theme: { colors } }) => colors.white};
-  font-weight: 600;
+  height: 50px;
+  width: 100%;
   background-color:${
     (props) => props.projectTheme === 'mars' ? ({ theme: { colors } }) => colors.twilight:
     props.projectTheme === 'coffee' ? ({ theme: { colors } }) => colors.twilight :
     props.projectTheme === 'ratatap' ? ({ theme: { colors } }) => colors.twilight:
     props.projectTheme === 'rgb' ? ({ theme: { colors } }) => colors.twilight : 'black' };
-  padding-left: 18px;
-  word-break: normal;
+`;
+
+  const Title = styled.h4` 
+  font-size: 1.2rem;
+  color: ${({ theme: { colors } }) => colors.white};
+  font-weight: 600;
+  padding-left: 24px;
+  /* word-break: normal; */
   margin: 0px;
-  height: 50px;
 `;
 
 const Subtitle = styled.p`
@@ -76,8 +83,10 @@ const Subtitle = styled.p`
 `;
 
 
-const FirstContainer = styled.div`  
+const Content = styled.div`  
   width: 100%;
+  display: flex;
+  justify-content: space-between;
 `;
 
 const Tools = styled.div`
@@ -89,6 +98,7 @@ const Tools = styled.div`
 `;
 
 const Preview = styled.img`
+  width: 20%;
   max-width: auto;
   max-height: auto;
   margin-bottom: 0;
@@ -97,14 +107,19 @@ const Preview = styled.img`
   border-left: 4px solid ${({ theme: { colors } }) => colors.twilight};*/
 `;
 
+const Details = styled.div`
 
+`;
 
 const Project = ({title, subTitle, previewImg, ghLink, liveLink, projSkills, projTheme}) => {
   
   return (
     <Proj projectTheme={projTheme}>
-        <FirstContainer>
-          <Title projectTheme={projTheme}>{title}</Title>
+      <TitleContainer projectTheme={projTheme}>
+        <Title >{title}</Title>  
+      </TitleContainer>  
+      <Content>
+        <Details>
           <Subtitle projectTheme={projTheme}>{subTitle}</Subtitle>
           <Tools>
           {projSkills.map((s, i) => {
@@ -115,9 +130,9 @@ const Project = ({title, subTitle, previewImg, ghLink, liveLink, projSkills, pro
           </Tools>
           <Button goto={liveLink}>View Live</Button>
           <Button goto={ghLink}>View on GitHub</Button>
-        </FirstContainer>
-        
+        </Details>
         <Preview src={previewImg}/>
+        </Content>
     </Proj>
 
   )};
