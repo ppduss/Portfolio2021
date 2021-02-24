@@ -2,13 +2,20 @@ import React from 'react';
 import styled, { keyframes, css } from 'styled-components';
 import media from '../media';
 
+
 const SVG = styled.svg`
-  position: absolute;
-  top: 10vw;
-  /* left: 10vw; */
+  position: absolute; 
+  top: 0; 
+  left: 0; 
   z-index: -2;
-  width: 500px;
+  width: 100%;
   /* opacity: 0.9; */
+  ${media.lg`
+  /* width: 450px; */
+  `}
+    ${media.xl`
+  /* width: 550px; */
+  `}
 `;
 
 const TopSVG = () => (

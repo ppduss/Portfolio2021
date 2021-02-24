@@ -17,7 +17,6 @@ import GlobalStyle from '../globalStyles';
 import Footer from "../components/Footer";
 import TopSVG from '../components/TopContainerSVG';
 import SplitSVG from '../components/SplitContainerSVG';
-import GeodomeSVG from '../components/Geodome';
 import Profile from '../components/Profile';
 import Blok from '../components/Blok';
 
@@ -29,17 +28,20 @@ const Main = styled.div`
   font-weight: 500;
 `;
 const TopContainer = styled.div`
-  background-color: ${({ theme: { colors } }) => colors.twilight};
   display: flex;
   justify-content: center;
-  align-items: center;
-  /* height: 450px; */
-  height: 50vh;
-  z-index: 5;
-  margin: 0px 0px 0px 0px;
-  ${media.md`
-  justify-content: space-between;
+  background-color: ${({ theme: { colors } }) => colors.twilight};
+  height: 500px;
 
+`;
+const TopContent = styled.div`
+  z-index: 5;
+  margin: 10% auto 0 auto;
+  width: 85%;
+  display: flex;
+  justify-content: center;
+    ${media.md`
+  justify-content: space-between;
 `}
 `;
 
@@ -47,24 +49,19 @@ const SplitContainer = styled.div`
   background-color: ${({ theme: { colors } }) => colors.lbutter};
   display: flex;
   flex-direction: column;
-  padding-top:100px;
+  padding-top: 10px;
   ${media.lg`
   flex-direction: row;
 `}
-
 `;
-
-
 const ContainerLeft = styled.div`
   display: flex;
   flex-direction: column; 
   align-items: center;
   ${media.lg`
   width: 18vw; //must be controlled in conjct. with IconContainer
-    
 `}
 `;
-
 const ContainerRight = styled.div`
   background-color: ${({ theme: { colors } }) => colors.lbutter};
   width: 100%;
@@ -73,15 +70,17 @@ const ContainerRight = styled.div`
   align-items: center;
 `;
 
+
 const IndexPage = () => (
   <Theme>
     <GlobalStyle/>
     <SEO title="Patrick Dussault" />
     <Main>
       <TopContainer>
-        <Profile />
-        <GeodomeSVG />
-        <Collage /> 
+        <TopContent>
+          <Profile />
+          <Collage /> 
+        </TopContent>
       </TopContainer>
       <TopSVG/>
       <SplitSVG/>
@@ -89,8 +88,6 @@ const IndexPage = () => (
         
         <ContainerLeft>
           <Skills />
-          {/* <Link to="/page-2/">Go to page 2</Link> <br />
-          <Link to="/using-typescript/">Go to "Using TypeScript"</Link> */}
           <Blok/>
 
         </ContainerLeft>

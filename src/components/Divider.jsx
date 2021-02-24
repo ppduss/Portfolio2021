@@ -18,11 +18,10 @@ const Line = styled.line`
  stroke: black;
  stroke-width: 5;
  z-index: 0;
-
  `;
 
 const Svg = styled.svg`
-  margin-top: -300px;
+ margin-top: -20vw;
  opacity: 0;
  animation: ${lineanim} 5s cubic-bezier(.41,.99,.74,.95) forwards;
  animation-iteration-count: 1;
