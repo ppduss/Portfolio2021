@@ -12,17 +12,21 @@ const Proj = styled.div`
       props.projectTheme === 'ratatap' ? ({ theme: { colors } }) => colors.greypoupon :
         props.projectTheme === 'rgb' ? ({ theme: { colors } }) => colors.butter : 'black'};
   /* border-top: 2px solid ${({ theme: { colors } }) => colors.grey}; */
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   border: 1px solid ${({ theme: { colors } }) => colors.twilight};
   border-radius: 3px;
-  height: 320px;
+  height: 275px;
   font-weight: 400;
   font-size: 0.8em;
   width: 95%;
   max-width: 900px;
 
   ${media.xs`
+  height: 320px;
+
   width: 95%;
+  margin-bottom: 100px;
+
   `}
   ${media.sm`
   width: 85%;

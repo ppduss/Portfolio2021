@@ -17,13 +17,16 @@ const ImgContainer = styled.a`
 const Img = styled.img`
   width: 400px;
   ${media.md`
-    width: 500px;
+    width: 400px;
 `}
   ${media.lg`
-    width: 600px;
+    width: 500px;
 `}
   ${media.xl`
-    width: 700px;
+    width: 600px;
+`}
+  ${media.xxl`
+    width: 800px;
 `}
 `;
 

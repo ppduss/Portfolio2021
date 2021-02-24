@@ -17,9 +17,12 @@ import media from '../../media';
 const TopSkills = styled.div`
   background-color: ${({ theme: { colors } }) => colors.lbutter};
   margin-bottom: 100px;
-  display: flex;
+  display: none;
   flex-direction: row;
   align-items: center;
+    ${media.xs`
+  display: flex;
+`}
     ${media.lg`
     margin-bottom: 200px;
     flex-direction: column;

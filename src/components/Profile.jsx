@@ -16,15 +16,16 @@ const ProfileContainer = styled.div`
   height: 400px;
   ${media.md`
   justify-content: space-between;
-  /* margin-top: 400px; */
-  /* margin-left: 12vw; */
   `}
     ${media.lg`
-  width: 450px;
+  width: 400px;
   height: 450px;
 
   `}
     ${media.xl`
+  width: 500px;
+  `}
+    ${media.xxl`
   width: 550px;
   `}
 `;
