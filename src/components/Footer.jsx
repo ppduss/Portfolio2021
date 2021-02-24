@@ -31,7 +31,7 @@ const FooterTxt = styled.p`
 
 const Footer = () => (
   <FooterContainer>
-    <FooterTitle>Footer</FooterTitle>
+    <FooterTitle>Thanks for visiting :)</FooterTitle>
     <FooterSecondContainer>
       <FooterTxt>© {new Date().getFullYear()}, Built with love and with {` `} <a href="https://www.gatsbyjs.com">Gatsby</a><br/> Interested in how I built this portfolio? Check out my git repo.
       </FooterTxt>

@@ -7,18 +7,27 @@ import aboutImg from '../images/tempimg.png';
 const AboutContainer = styled.div`
   background-color: ${({ theme: { colors } }) => colors.twilight};
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding-top: 160px;
   height: 1000px;
+    ${media.sm`
+   flex-direction: row;
+
+  `}
 `;
 
 const AboutTitle = styled.h1`
 font-size: 4rem;
   color: ${({ theme: { colors } }) => colors.black};
-  margin-left: -30px;
-  margin-top: -30px;
+ margin: 0 auto;
   z-index: 5;
+       ${media.sm`
+    margin-left: -30px;
+  margin-top: -30px;
+
+  `}
 `;
 
 const AboutSecondContainer = styled.div`
@@ -28,7 +37,11 @@ const AboutSecondContainer = styled.div`
 
 const AboutImg = styled.img`
   filter: grayscale(100);
-  width: 400px;
+  width: 250px;
+     ${media.sm`
+   width: 400px;
+
+  `}
 `;
 
 const AboutTxt = styled.p`
@@ -36,9 +49,13 @@ const AboutTxt = styled.p`
   border-radius: 15px;
   margin-left: 30px;
   color: ${({ theme: { colors } }) => colors.black};
-  width: 475px;
+  width: 90%;
   height: 400px;
   padding: 20px;
+       ${media.sm`
+   width: 475px;
+
+  `}
 `;
 
 const About = () => (

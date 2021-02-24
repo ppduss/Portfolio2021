@@ -4,9 +4,9 @@ import Theme from '../Theme';
 import media from '../media';
 
 const StyledButton = styled.button`
-  width: 125px;
+  /* width: 125px; */
   margin-right: 15px;
-  padding: 8px 10px;
+  padding: 8px 12px;
   text-align: center;
   align-self: right;
   color: ${({ theme: { colors } }) => colors.black};
@@ -31,8 +31,8 @@ const StyledButton = styled.button`
     border: 1px solid grey;
     outline: none;
   }
-  ${media.xl`
-
+  ${media.sm`
+  padding: 8px 20px;
 `}
 `;
 

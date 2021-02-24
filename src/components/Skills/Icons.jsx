@@ -28,10 +28,14 @@ const drop = keyframes`
 const IconContainer = styled.div`
   position: relative;
   display: flex;
+  /* flex-wrap: wrap; */
   flex-direction: column;
   align-items: center;
   width: 8vw;
   margin-top: 30px;
+  ${media.xs`
+    width: 8vw;
+  `}
   ${media.lg`
     width: 18vw;
   `}
@@ -41,11 +45,15 @@ const IconName = styled.p`
   position: absolute;
   transition: all 200ms ease;
   opacity: 0;
+  display: none;
   margin-top: 60px;
   ${IconContainer}:hover & {
     opacity: 1;
     transition: all 300ms ease 400ms;
   };
+  ${media.sm`
+    display: block;
+  `} 
   ${media.lg`
   margin-top: 0;
   position: absolute;
@@ -56,7 +64,6 @@ const IconName = styled.p`
   font-size: 1rem;
   left: 12.5vw;
   `} 
-
 `;
 
 const Icon = styled.img`

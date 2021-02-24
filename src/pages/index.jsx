@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "gatsby";
+import React, { useState, useEffect } from "react";
+// import { Link } from "gatsby";
 import styled from "styled-components";
 import Collage from "../components/Collage";
 import Skills from "../components/Skills/Index";
@@ -12,6 +12,10 @@ import mars from '../images/mars3.png';
 import coffee from '../images/coffee3.png';
 import rgb from '../images/rgb3.png';
 import ratatap from '../images/ratatap3.png';
+import marssq from '../images/proj-mars.png';
+import coffeesq from '../images/proj-coffee.png';
+import rgbsq from '../images/proj-rgb.png';
+import ratatapsq from '../images/proj-ratatap.png';
 import media from '../media';
 import GlobalStyle from '../globalStyles';
 import Footer from "../components/Footer";
@@ -20,6 +24,21 @@ import SplitSVG from '../components/SplitContainerSVG';
 import Profile from '../components/Profile';
 import Blok from '../components/Blok';
 import Nav from '../components/Nav';
+
+function ImgSelector(img, imgsq) {
+  const [imgSelection, setSelection] = useState(img)
+  useEffect(() => {
+    function handleResize() {
+      if (window.innerWidth > 992) {
+        setSelection(img);
+      } else {
+        setSelection(imgsq);
+      }
+    }
+    window.addEventListener('resize', handleResize)
+  }, [])
+  return imgSelection
+}
 
 const Main = styled.div`
   background-color: ${({ theme: { colors } }) => colors.deepsalmon};
@@ -85,7 +104,8 @@ const IndexPage = () => (
         <TopContent>
           <Profile />
           <Collage />
-          <Nav/>
+          <Nav />
+          
         </TopContent>
       </TopContainer>
       <TopSVG/>
@@ -99,10 +119,10 @@ const IndexPage = () => (
         </ContainerLeft>
         <Divider/>
         <ContainerRight>
-          <Project title={"The Mars Weather Network"} subTitle={"A weather report using two NASA APIs that tracks   the last seven available Sols (Martian days)."} previewImg={mars} liveLink={'https://ppduss.github.io/  TheMarsWeatherNetwork/'} ghLink={"https://ppduss.github.io/TheMarsWeatherNetwork/"} projSkills={['HTML5', "SCSS", 'Flexbox', 'Grid', "React", 'API']} projTheme='mars'/>  
-          <Project title={"Coffee Prescriber"} subTitle={"A playful app that tracks your happiness to productivity  ratio as you drink coffee and helps monitor whether it's wise to keep drinking."} previewImg={coffee} liveLink={'https://ppduss.github.io/Coffee-Prescriber/'} ghLink={"https://github.com/ppduss/ Coffee-Prescriber"} projSkills={['HTML5', "SCSS", 'Flexbox', "React"]} projTheme='coffee' />  
-          <Project title={"Ratatap Drum Pad"} subTitle={"A clone of the patatap.com drum pads using my favorite samples."} previewImg={ratatap} liveLink={'https://ppduss.github.io/Ratatap/'} ghLink={"https://github.com/ppduss/Ratatap"} projSkills={['HTML5', 'CSS3', 'JS', 'Paper.js', 'Howler.js']} projTheme='ratatap'/> 
-          <Project title={"RGB Guessing Game"} subTitle={"Guess which box contains the randomly generated RGB value!"} previewImg={rgb} liveLink={'https://ppduss.github.io/RGB/'} ghLink={"https://github.com/ppduss/RGB"} projSkills={  ['HTML', "CSS", 'JS']} projTheme='rgb'/> 
+          <Project class="project" title={"The Mars Weather Network"} subTitle={"A weather report using two NASA APIs that tracks   the last seven available Sols (Martian days)."} previewImg={ImgSelector(mars, marssq)} liveLink={'https://ppduss.github.io/  TheMarsWeatherNetwork/'} ghLink={"https://ppduss.github.io/TheMarsWeatherNetwork/"} projSkills={['HTML5', "SCSS", 'Flexbox', 'Grid', "React", 'API']} projTheme='mars'/>  
+          <Project class="project" title={"Coffee Prescriber"} subTitle={"A playful app that tracks your happiness to productivity  ratio as you drink coffee and helps monitor whether it's wise to keep drinking."} previewImg={ImgSelector(coffee, coffeesq)} liveLink={'https://ppduss.github.io/Coffee-Prescriber/'} ghLink={"https://github.com/ppduss/ Coffee-Prescriber"} projSkills={['HTML5', "SCSS", 'Flexbox', "React"]} projTheme='coffee' />  
+          <Project class="project" title={"Ratatap Drum Pad"} subTitle={"A clone of the patatap.com drum pads using my favorite samples."} previewImg={ImgSelector(ratatap, ratatapsq)} liveLink={'https://ppduss.github.io/Ratatap/'} ghLink={"https://github.com/ppduss/Ratatap"} projSkills={['HTML5', 'CSS3', 'JS', 'Paper.js', 'Howler.js']} projTheme='ratatap'/> 
+          <Project class="project" title={"RGB Guessing Game"} subTitle={"Guess which box contains the randomly generated RGB value!"} previewImg={ImgSelector(rgb, rgbsq)} liveLink={'https://ppduss.github.io/RGB/'} ghLink={"https://github.com/ppduss/RGB"} projSkills={  ['HTML', "CSS", 'JS']} projTheme='rgb'/> 
    
         </ContainerRight>
       </SplitContainer>
@@ -113,5 +133,6 @@ const IndexPage = () => (
     
     </Theme>
 )
+
 
 export default IndexPage
