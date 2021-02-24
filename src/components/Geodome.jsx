@@ -10,12 +10,6 @@ const SVG = styled.svg`
   z-index: -2;
   width: 100%;
   /* opacity: 0.9; */
-  ${media.lg`
-  /* width: 450px; */
-  `}
-    ${media.xl`
-  /* width: 550px; */
-  `}
 `;
 
 const TopSVG = () => (

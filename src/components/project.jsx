@@ -13,9 +13,9 @@ const Proj = styled.div`
     props.projectTheme === 'ratatap' ? ({ theme: { colors } }) => colors.greypoupon :
     props.projectTheme === 'rgb' ? ({ theme: { colors } }) => colors.butter : 'black' };
   /* border-top: 2px solid ${({ theme: { colors } }) => colors.grey}; */
-  margin-bottom: 160px;
+  margin-bottom: 100px;
   border: 1px solid ${({ theme: { colors } }) => colors.twilight};
-  border-radius: 2px;
+  border-radius: 3px;
   height: 320px;
   font-weight: 400;
   font-size: 0.8em;

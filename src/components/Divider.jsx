@@ -9,7 +9,7 @@ const lineanim = keyframes`
     opacity: 1;
   }
   to {
-    height: 1500;
+    height: 2000;
     opacity: 1;
   }
 `;
@@ -35,7 +35,7 @@ const Svg = styled.svg`
 
 const Divider = () => (
 
-  <Svg height="1500" width="8">
+  <Svg height="2000" width="8">
   <Line x1="0" y1="0" x2="0" y2="2000" />
   Sorry, your browser does not support inline SVG.
   </Svg>
