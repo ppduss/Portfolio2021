@@ -33,7 +33,8 @@ const TopContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 450px;
+  /* height: 450px; */
+  height: 50vh;
   z-index: 5;
   margin: 0px 0px 0px 0px;
   ${media.md`

@@ -8,6 +8,17 @@ html {
   box-sizing: border-box;
   overflow-y: scroll;
 }
+.dome-path, .dome-circle {
+  
+  transition: all 1500ms linear;
+    &:hover {
+    transition: all 1ms linear;
+    color: white;
+    opacity: 0.9;
+    /* transition: opacity 2s linear; */
+  }
+}
+
 body {
   margin: 0;
   background-color: whitesmoke;
