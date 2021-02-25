@@ -62,12 +62,13 @@ const GalleryImg = styled.img`
 `;
 const GalleryPage = () => (
 
+  
    <Theme>
     <GlobalStyle/>
     <SEO title="Gallery" />
     <Main>
       <TopContainer>
-        <Link to="/Index">Go back to the homepage</Link>
+        <Link to="/">Go back to the homepage</Link>
       </TopContainer>
       <TopSVG/>
       <SplitSVG />

@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: "/Portfolio2021",
   siteMetadata: {
     title: `Front-end Web Developer`,
     description: `Patrick Dussault is a web dev from Montreal, Quebec.`,
@@ -6,6 +7,12 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        // Add any options here
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -24,7 +31,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/downloadpix.png`, // This path is relative to the root of the site.
+        icon: `src/images/favicontest.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

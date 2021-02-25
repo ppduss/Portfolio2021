@@ -85,6 +85,7 @@ const ContainerLeft = styled.div`
   ${media.lg`
   width: 18vw; //must be controlled in conjct. with IconContainer
 `}
+
 `;
 const ContainerRight = styled.div`
   background-color: ${({ theme: { colors } }) => colors.lbutter};
@@ -105,17 +106,14 @@ const IndexPage = () => (
           <Profile />
           <Collage />
           <Nav />
-          
         </TopContent>
       </TopContainer>
       <TopSVG/>
       <SplitSVG/>
       <SplitContainer>
-        
         <ContainerLeft>
           <Skills />
           <Blok/>
-
         </ContainerLeft>
         <Divider/>
         <ContainerRight>
@@ -130,7 +128,6 @@ const IndexPage = () => (
       <About />
       <Footer/>
     </Main>
-    
     </Theme>
 )
 

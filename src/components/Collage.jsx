@@ -31,7 +31,7 @@ const Img = styled.img`
 `;
 
 const Collage = () => (
-  <ImgContainer href="/Gallery">
+  <ImgContainer href="/Portfolio2021/Gallery">
     <Img src={collage} />
   </ImgContainer>
 )

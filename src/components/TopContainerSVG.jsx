@@ -1,6 +1,5 @@
 import React from 'react';
-import styled, { keyframes, css } from 'styled-components';
-import media from '../media';
+import styled from 'styled-components';
 
 const SVG = styled.svg`
   /* margin-top: -20px; */

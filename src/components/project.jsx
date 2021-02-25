@@ -1,4 +1,4 @@
-import styled, { keyframes, css } from "styled-components";
+import styled from "styled-components";
 import React from "react";
 import Button from "./Button";
 import media from '../media';
@@ -23,10 +23,8 @@ const Proj = styled.div`
 
   ${media.xs`
   height: 320px;
-
   width: 95%;
-  margin-bottom: 100px;
-
+  margin-bottom: 80px;
   `}
   ${media.sm`
   width: 85%;

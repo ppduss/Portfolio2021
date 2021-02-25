@@ -20,6 +20,7 @@ const NavContainer = styled.div`
     top: 14%;
   right: 7.5%;
 `}
+
 `;
 
 const NavLinks = styled.a`

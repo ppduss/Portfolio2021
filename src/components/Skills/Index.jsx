@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import React from "react"
 import Skill from './Icons'
 import CssIcon from '../../images/skills/css_icon.png'
