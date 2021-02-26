@@ -12,8 +12,13 @@ const ProfileContainer = styled.div`
   flex-direction: column; 
   justify-content: center;
   align-items: center;
+  /* overflow: hidden; */
+  width: 100%;
+  height: 400px;
+  ${media.xs`
   width: 400px;
   height: 400px;
+  `}
   ${media.md`
   justify-content: space-between;
   `}
@@ -31,6 +36,7 @@ const ProfileContainer = styled.div`
 `;
 
 const ProfileContent = styled.div`
+  z-index: 4;
   margin-top: 30%;
   position: relative;
   height: 100%;

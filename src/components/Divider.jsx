@@ -21,6 +21,9 @@ const Line = styled.line`
  `;
 
 const Svg = styled.svg`
+z-index: 1;
+  position: absolute;
+  left: 18%;
  margin-top: -20vw;
  opacity: 0;
  animation: ${lineanim} 5s cubic-bezier(.41,.99,.74,.95) forwards;

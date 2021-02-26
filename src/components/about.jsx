@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 // import Theme from '../Theme';
 import media from '../media';
@@ -6,7 +6,19 @@ import aboutImg from '../images/tempimg.png';
 import aboutBerd from '../images/berd.png';
 import aboutPaint from '../images/paint3.gif';
 
+function ScrollSelect() {
+  const [scroll, setScroll] = useState("none");
+  useEffect(() => {
+    function handleScroll() {
+      window.scrollY >= 2000 ? setScroll("block") : setScroll("none") 
+    }
+    window.addEventListener("scroll", handleScroll);
+  }, [])
+  return scroll
+}
+
 const AboutContainer = styled.div`
+  z-index: 2;
   background-color: ${({ theme: { colors } }) => colors.twilight};
   display: flex;
   flex-direction: column;
@@ -21,7 +33,7 @@ const AboutContainer = styled.div`
 `;
 
 const AboutTitle = styled.h1`
-font-size: 4rem;
+font-size: 4.1rem;
   color: ${({ theme: { colors } }) => colors.black};
  margin: 0 auto;
   z-index: 5;
@@ -38,23 +50,37 @@ const AboutSecondContainer = styled.div`
 `;
 
 const AboutBlock = styled.video`
-z-index: 1;
+  z-index: 1;
   position: absolute;
-  left: 35%;
+  margin: 0 auto;
   background-color: ${({ theme: { colors } }) => colors.deepsalmon};
   height: 700px;
+  width: 90%;
+  transition: all 1s linear;
+    ${media.sm`
+  left: 35%;
+
+height: 700px;
   width: 200px;
+
+  `}
 `;
+
+const PaintContainer = styled.div`
+  position: relative;
+`;
+
 
 const AboutPaint = styled.img`
   position: absolute;
-  /* top: 10px; */
-  left: 48%;
+  top: 20px;
+  /* left: 48%; */
   z-index: 0;
   width: 500px;
   height: 500px;
-  /* display: none; */
+  display: ${ScrollSelect};
   opacity: 80%;
+
 `;
 
 
@@ -76,12 +102,18 @@ const AboutTxt = styled.p`
   z-index: 5;
   /* background-color: ${({ theme: { colors } }) => colors.twilight}; */
   border-radius: 15px;
-  margin-left: 30px;
+  margin: 0 auto;
   color: ${({ theme: { colors } }) => colors.black};
   width: 90%;
+  text-align: center;
   height: 400px;
   padding: 20px;
+       ${media.xs`
+  width: 80%;
+  `}
        ${media.sm`
+  text-align: start;
+   margin-left: 30px;    
    width: 475px;
 
   `}
@@ -93,7 +125,7 @@ const About = () => (
     <AboutImg src={aboutBerd} />
     
     <AboutSecondContainer>
-    <AboutPaint src={aboutPaint}/>
+    <PaintContainer><AboutPaint src={aboutPaint}/></PaintContainer>
 
       <AboutTitle>About<br />me</AboutTitle>
       <AboutTxt>I'm a front-end developer based in Montreal who loves creating beautiful and engaging websites built with elegant code. Always interested in exploring new and creative ways to improve efficiency user experience. I also have experience with 2D/3D modeling for manufacturing, 3D printing, CNC programming, and photography editing.</AboutTxt>

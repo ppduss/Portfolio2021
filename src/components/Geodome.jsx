@@ -1,19 +1,20 @@
 import React from 'react';
-import styled, { keyframes, css } from 'styled-components';
-import media from '../media';
+import styled from 'styled-components';
 
 
 const SVG = styled.svg`
   position: absolute; 
+  overflow: visible !important;
   top: 0; 
   left: 0; 
-  z-index: -2;
+  z-index: 1;
   width: 100%;
+  height: 100%;
   /* opacity: 0.9; */
 `;
 
 const TopSVG = () => (
-  <SVG class="w-full text-skill-3 opacity-75 m-2" viewBox="460.5 460.5 79 79" width="300" fill="currentColor" >
+  <SVG class="w-full text-skill-3 opacity-75 m-2" viewBox="460.5 460.5 79 79" fill="currentColor" >
     
     <path class="dome-path" d="m504.7 500.2-5.5-3.4v-.1h.1zm-5.4 3.8c-.1 0-.1 0 0 0-.1 0-.1-.1 0 0l5.4-3.8h.1v.1z" opacity=".106">
     </path>

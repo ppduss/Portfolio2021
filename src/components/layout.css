@@ -121,9 +121,9 @@ img {
   padding-top: 0;
   margin-bottom: 1.45rem;
 }
-svg:not(:root) {
+/* svg:not(:root) {
   overflow: hidden;
-}
+} */
 code,
 kbd,
 pre,

@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Theme from '../Theme';
 import media from '../media';    
+import Nav from '../components/Nav';
 
 const FooterContainer = styled.div`
   background-color: ${({ theme: { colors } }) => colors.clay};
@@ -26,14 +27,15 @@ const FooterSecondContainer = styled.div`
 
 const FooterTxt = styled.p`
   color: black;
-
+  text-align: center;
 `;
 
 const Footer = () => (
   <FooterContainer>
-    <FooterTitle>Thanks for visiting :)</FooterTitle>
+    {/* <FooterTitle>Thanks for visiting :)</FooterTitle> */}
     <FooterSecondContainer>
-      <FooterTxt>© {new Date().getFullYear()}, Built with love and with {` `} <a href="https://www.gatsbyjs.com">Gatsby</a><br/> Interested in how I built this portfolio? Check out my git repo.
+      <FooterTxt>© {new Date().getFullYear()}, Built with React, <a href="https://styled-components.com/">Styled-Components</a> , and with <a href="https://www.gatsbyjs.com">Gatsby</a><br /> Interested in how I built this portfolio? Check out my <a href="https://github.com/ppduss/Portfolio2021">github repo</a>.
+        <Nav/>
       </FooterTxt>
     </FooterSecondContainer>
   </FooterContainer>

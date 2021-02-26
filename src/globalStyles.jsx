@@ -8,16 +8,16 @@ html {
   box-sizing: border-box;
   overflow-y: scroll;
 }
-.dome-path, .dome-circle {
+/* .dome-path, .dome-circle {
   
   transition: all 1500ms linear;
     &:hover {
     transition: all 1ms linear;
     color: white;
     opacity: 0.9;
-    /* transition: opacity 2s linear; */
+    transition: opacity 2s linear;
   }
-}
+} */
 
 body {
   margin: 0;
@@ -135,8 +135,12 @@ img {
   padding-top: 0;
   margin-bottom: 1.45rem;
 }
+svg {
+  overflow: visible;
+
+}
 svg:not(:root) {
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 code,
 kbd,

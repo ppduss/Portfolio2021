@@ -24,8 +24,9 @@ const NavContainer = styled.div`
 `;
 
 const NavLinks = styled.a`
-   width: 30px 
-    `;
+  width: 30px;
+`;
+  
 const SocialIcn = styled.img`
  height: 100%;
  transition: all 100ms linear;
@@ -41,8 +42,6 @@ const Nav = () => (
     <NavLinks href="mailto:ppduss@gmail.com" target="_blank"><SocialIcn src={mail}></SocialIcn></NavLinks>
     {/* <NavLinks><SocialIcn src={qu}></SocialIcn></NavLinks> */}
   </NavContainer>
-
-
 )
 
 export default Nav;
