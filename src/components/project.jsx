@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import React from "react";
-import Button from "./Button";
+import Button from "./Button.jsx";
 import media from '../media';
 
 const Proj = styled.div`

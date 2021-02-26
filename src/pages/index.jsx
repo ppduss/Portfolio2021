@@ -25,6 +25,8 @@ import Profile from '../components/Profile';
 import Blok from '../components/Blok';
 import Nav from '../components/Nav';
 import Recent from '../components/Recent';
+import Prohibition from '../images/Prohibition.png';
+
 
 function ImgSelector(img, imgsq) {
   const [imgSelection, setSelection] = useState(img)
@@ -53,7 +55,6 @@ const TopContainer = styled.div`
   justify-content: center;
   background-color: ${({ theme: { colors } }) => colors.twilight};
   height: 500px;
-
 `;
 const TopContent = styled.div`
   z-index: 5;
@@ -83,11 +84,10 @@ const ContainerLeft = styled.div`
   display: flex;
   flex-direction: column; 
   align-items: center;
-  margin-top: -200px;
+  /* margin-top: -200px; */
   ${media.lg`
   width: 18vw; //must be controlled in conjct. with IconContainer
 `}
-
 `;
 const ContainerRight = styled.div`
   background-color: ${({ theme: { colors } }) => colors.lbutter};
@@ -95,7 +95,7 @@ const ContainerRight = styled.div`
   display: flex;
   flex-direction: column; 
   align-items: center;
-  margin-top: -200px;
+  /* margin-top: -200px; */
 `;
 
 const RecentPosition = styled.div`
@@ -105,11 +105,20 @@ const RecentPosition = styled.div`
 `;
 
 const RecentContainer = styled.div`
-width: 100%;
-top: -400px;
-/* position: relative; */
+  /* background-color: white; */
+  width: 80%;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+
+  justify-content: space-around;
+  margin-bottom: 120px;
+    ${media.sm`
+  flex-direction: row;
+`}
+    ${media.md`
+    width: 70%;
+`}
 `;
 
 const IndexPage = () => (
@@ -134,12 +143,12 @@ const IndexPage = () => (
         </ContainerLeft>
         <Divider/>
         <ContainerRight>
-          <RecentPosition>
+          {/* <RecentPosition> */}
             <RecentContainer>
-              <Recent title={"CS Games"} subTitle={"Layout and countdown for CS Games 20"} liveLink={'https://ppduss.github.io/CSGames/'} ghLink={"https://github.com/ppduss/CSGames"} />
-              <Recent title={"CS Games"} subTitle={"Layout and countdown for CS Games 20"}  liveLink={'https://ppduss.github.io/CSGames/'} ghLink={"https://github.com/ppduss/CSGames"} />
+            <Recent title={"CS Games"} subTitle={"Layout and countdown for CS Games 20"} liveLink={'https://ppduss.github.io/CSGames/'} ghLink={"https://github.com/ppduss/CSGames"} previewImg={Prohibition}/>
+              <Recent title={"CS Games"} subTitle={"Layout and countdown for CS Games 20"}  liveLink={'https://ppduss.github.io/CSGames/'} ghLink={"https://github.com/ppduss/CSGames"} previewImg={Prohibition}/>
             </RecentContainer>
-          </RecentPosition>
+          {/* </RecentPosition> */}
           <Project class="project" title={"The Mars Weather Network"} subTitle={"A weather report using two NASA APIs that tracks   the last seven available Sols (Martian days)."} previewImg={ImgSelector(mars, marssq)} liveLink={'https://ppduss.github.io/TheMarsWeatherNetwork/'} ghLink={"https://ppduss.github.io/TheMarsWeatherNetwork/"} projSkills={['HTML5', "SCSS", 'Flexbox', 'Grid', "React", 'API']} projTheme='mars'/>  
           <Project class="project" title={"Coffee Prescriber"} subTitle={"A playful app that tracks your happiness to productivity  ratio as you drink coffee and helps monitor whether it's wise to keep drinking."} previewImg={ImgSelector(coffee, coffeesq)} liveLink={'https://ppduss.github.io/Coffee-Prescriber/'} ghLink={"https://github.com/ppduss/ Coffee-Prescriber"} projSkills={['HTML5', "SCSS", 'Flexbox', "React"]} projTheme='coffee' />  
           <Project class="project" title={"Ratatap Drum Pad"} subTitle={"A clone of the patatap.com drum pads using my favorite samples."} previewImg={ImgSelector(ratatap, ratatapsq)} liveLink={'https://ppduss.github.io/Ratatap/'} ghLink={"https://github.com/ppduss/Ratatap"} projSkills={['HTML5', 'CSS3', 'JS', 'Paper.js', 'Howler.js']} projTheme='ratatap'/> 

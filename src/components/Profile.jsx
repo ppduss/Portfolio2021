@@ -38,7 +38,7 @@ const ProfileContainer = styled.div`
 const ProfileContent = styled.div`
   z-index: 4;
   margin-top: 30%;
-  position: relative;
+  position: absolute;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -50,13 +50,11 @@ const PortImg = styled.img`
 /* position: relative; */
   width: 200px;
   border-radius: 35%;
-
-  /* top: 40%; */
   ${media.md`
     width: 200px;
 `}
   ${media.xl`
-    width: 260px;
+    width: 240px;
 `}
 `;
 

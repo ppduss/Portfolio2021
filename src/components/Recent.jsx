@@ -1,126 +1,90 @@
 import styled from "styled-components";
 import React from "react";
-import Button from "./Button";
 import media from '../media';
 import backgroundImg from '../images/recent-back.png'
 
+const RecentButton = styled.button`
+  margin: 0 5px;
+  padding: 10px 15px;
+  text-align: center;
+  align-self: right;
+  color: ${({ theme: { colors } }) => colors.black};
+  background-color: ${({ theme: { colors } }) => colors.white};
+  border: 1px solid ${({ theme: { colors } }) => colors.black};
+  font-size: 0.8rem;
+  border-radius: 3px;
+  text-transform: uppercase;
+  outline: none;
+  box-shadow: none;
+  &:focus {
+  }
+  &:visited {
+    border-color: grey;
+  }
+   &:hover {
+    background-color: ${({ theme: { colors } }) => colors.shadyblue};
+    cursor: pointer;
+  }
+  &:active {
+    border: 1px solid grey;
+    outline: none;
+  }
+  ${media.sm`
+  padding: 8px 20px;
+`}
+`;
+
 const Proj = styled.div`
-  z-index: 99;
+  position: relative;
+  background-color: #000000;
   display: flex;  
   flex-direction: column;
-  /* justify-content: center; */
-  align-items: center;
-  margin-bottom: 50px;
-  background-color:#FEC491;
-  border: 1px solid ${({ theme: { colors } }) => colors.twilight};
-  border-radius: 3px;
-  height: 275px;
-  font-weight: 400;
-  font-size: 0.8em;
-  width: 95%;
-  ${media.xs`
-  height: 200px;
-  width: 95%;
-  margin-bottom: 80px;
-  `}
-  ${media.sm`
-  width: 85%;
-  `}
-  ${media.md`
-  width: 80%;
-  `}
-  ${media.lg`
-  width: 400px;
-  `}
-`;
-
-
-const BackgroundImgContainer = styled.div`
-
-  position: relative;
-  display: flex;
   justify-content: center;
-  width: 100%;
-  /* z-index: -99; */
-  /* left: 0px; */
+  align-items: center;
+  margin-bottom: 40px;
+  border-radius: 3px;
+  width: 275px;
+  height: 275px;
+  overflow: hidden;
+    ${media.xs`
+    width: 300px;
+  height: 300px;
+`}
 `;
+
 const BackgroundImg = styled.img`
-  position: absolute;
-  z-index: -99;
-  /* width: 600px; */
-  top: -10px;
+  width: 100%;
+  opacity: 0.6;
+  transition: all 300ms linear;
+     &:hover {
+     opacity: 1;
+  }
 `;
 
 const TitleContainer = styled.div`
-  background-color: ${({ theme: { colors } }) => colors.dshadyblue};
+  position: absolute;
+  /* background-color: ${({ theme: { colors } }) => colors.dshadyblue}; */
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 15%;
   width: 100%;
+  top: 10%;
+
 `;
 
-  const Title = styled.h4` 
+const Title = styled.h4` 
   font-size: 1.2rem;
   color: ${({ theme: { colors } }) => colors.white};
   font-weight: 600;
   margin: 0px;
 `;
 
-const Subtitle = styled.p`
-  color: ${({ theme: { colors } }) => colors.black};
-  font-size: 0.9rem;
-  word-break: normal;
-  margin-bottom: 1rem;
-  text-align: center;
-      ${media.sm`
-  text-align: left;
-
-    font-size: 0.9rem;
-  margin-bottom: 2rem;
-
-  `} 
-`;
-
-
-
-const Content = styled.div`
-  width: 100%;
-  height: 85%;
-  display: flex;
-     flex-direction: column;
-  align-items: center;
-  justify-content: center;
-     ${media.xs`
-     flex-direction: row;
-  justify-content: space-between;
-
-  `}
-`;
-
-const Tools = styled.div`
-  display: flex;
-  justify-content: center;
-  min-width: 120px;
-  margin-bottom: 1rem;
-    ${media.sm`
-    justify-content: flex-start;
-    margin-bottom: 2rem;
-    `} 
-`;
-
-const Preview = styled.img`
-  height: 100%;
-  margin-bottom: 0;
-  display: none;
-    ${media.xs`
-    display: block;
-  `} 
-`;
 
 const Details = styled.div`
+position: absolute;
  display: flex;
- flex-direction: column;
+ flex-direction: row;
  align-items: center;
  justify-content: center;
   width: 100%;
@@ -135,29 +99,14 @@ const Recent = ({title, subTitle, previewImg, ghLink, liveLink, projSkills, proj
   
   return (
     <Proj projectTheme={projTheme}>
-      <BackgroundImgContainer>
-        <BackgroundImg src={backgroundImg} />
-      </BackgroundImgContainer>
-      <TitleContainer>
+        <BackgroundImg src={previewImg} />
+      {/* <TitleContainer>
         <Title >{title}</Title>  
-      </TitleContainer>  
-      <Content>
-        <Details>
-          <Subtitle projectTheme={projTheme}>{subTitle}</Subtitle>
-          {/* <Tools>
-          {projSkills.map((s, i) => {
-            return (
-              <div key={i + s}>{s} &nbsp;&nbsp;</div>
-            )
-          })}
-          </Tools> */}
-          <div>
-            <Button goto={liveLink}>View Live</Button>
-            <Button goto={ghLink}>View Repo</Button>
-          </div>
-        </Details>
-        <Preview src={previewImg}/>
-      </Content>
+      </TitleContainer>   */}
+      <Details>
+          <RecentButton goto={liveLink}>View Live</RecentButton>
+           <RecentButton goto={ghLink}>View Repo</RecentButton>
+      </Details>
     </Proj>
 
   )};

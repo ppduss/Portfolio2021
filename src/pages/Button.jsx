@@ -36,7 +36,7 @@ const StyledButton = styled.button`
 `}
 `;
 
-const Button = ({ goto, children, style }) => {
+const Button = ({ goto, children }) => {
   return (
       <StyledButton onClick={() => window.open(goto, '_blank')}>{children}</StyledButton>
   )
