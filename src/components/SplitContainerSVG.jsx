@@ -4,6 +4,7 @@ import styled from 'styled-components';
 const SVG = styled.svg`
   margin-bottom: -1px;
   transform: scale(1, -1); 
+  height: 50%;
 `;
 
 const TopSVG = () => (

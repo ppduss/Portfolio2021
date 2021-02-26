@@ -2,22 +2,24 @@ import styled from "styled-components";
 import React from "react";
 import Button from "./Button";
 import media from '../media';
+import backgroundImg from '../images/recent-back.png'
 
 const Proj = styled.div`
+  z-index: 99;
   display: flex;  
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: center; */
+  align-items: center;
   margin-bottom: 50px;
+  background-color:#FEC491;
   border: 1px solid ${({ theme: { colors } }) => colors.twilight};
   border-radius: 3px;
   height: 275px;
   font-weight: 400;
   font-size: 0.8em;
   width: 95%;
-  max-width: 900px;
-
   ${media.xs`
-  height: 320px;
+  height: 200px;
   width: 95%;
   margin-bottom: 80px;
   `}
@@ -28,14 +30,31 @@ const Proj = styled.div`
   width: 80%;
   `}
   ${media.lg`
-  width: 75%;
+  width: 400px;
   `}
 `;
 
 
-const TitleContainer = styled.div`
+const BackgroundImgContainer = styled.div`
+
+  position: relative;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
+  width: 100%;
+  /* z-index: -99; */
+  /* left: 0px; */
+`;
+const BackgroundImg = styled.img`
+  position: absolute;
+  z-index: -99;
+  /* width: 600px; */
+  top: -10px;
+`;
+
+const TitleContainer = styled.div`
+  background-color: ${({ theme: { colors } }) => colors.dshadyblue};
+  display: flex;
+  justify-content: center;
   align-items: center;
   min-height: 15%;
   width: 100%;
@@ -45,8 +64,6 @@ const TitleContainer = styled.div`
   font-size: 1.2rem;
   color: ${({ theme: { colors } }) => colors.white};
   font-weight: 600;
-  padding-left: 30px;
-  /* word-break: normal; */
   margin: 0px;
 `;
 
@@ -66,7 +83,8 @@ const Subtitle = styled.p`
 `;
 
 
-const Content = styled.div`  
+
+const Content = styled.div`
   width: 100%;
   height: 85%;
   display: flex;
@@ -104,11 +122,12 @@ const Details = styled.div`
  display: flex;
  flex-direction: column;
  align-items: center;
-  width: 90%;
+ justify-content: center;
+  width: 100%;
   padding: 30px;
-    ${media.xs`
- align-items: flex-start;
-    width: 60%;
+  ${media.xs`
+    align-items: center;
+    width: 100%;
   `}
 `;
 
@@ -116,19 +135,22 @@ const Recent = ({title, subTitle, previewImg, ghLink, liveLink, projSkills, proj
   
   return (
     <Proj projectTheme={projTheme}>
-      <TitleContainer projectTheme={projTheme}>
+      <BackgroundImgContainer>
+        <BackgroundImg src={backgroundImg} />
+      </BackgroundImgContainer>
+      <TitleContainer>
         <Title >{title}</Title>  
       </TitleContainer>  
       <Content>
         <Details>
           <Subtitle projectTheme={projTheme}>{subTitle}</Subtitle>
-          <Tools>
+          {/* <Tools>
           {projSkills.map((s, i) => {
             return (
               <div key={i + s}>{s} &nbsp;&nbsp;</div>
             )
           })}
-          </Tools>
+          </Tools> */}
           <div>
             <Button goto={liveLink}>View Live</Button>
             <Button goto={ghLink}>View Repo</Button>

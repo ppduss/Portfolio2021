@@ -17,8 +17,8 @@ const NavContainer = styled.div`
   /* background-color: black; */
     ${media.md`
   position: absolute;
-    top: 14%;
-  right: 7.5%;
+    top: 16%;
+    right: 9.5%;
 `}
 
 `;

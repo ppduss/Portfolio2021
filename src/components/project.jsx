@@ -19,12 +19,12 @@ const Proj = styled.div`
   font-weight: 400;
   font-size: 0.8em;
   width: 95%;
-  max-width: 900px;
+  max-width: 850px;
 
   ${media.xs`
   height: 320px;
   width: 95%;
-  margin-bottom: 80px;
+  margin-bottom: 60px;
   `}
   ${media.sm`
   width: 85%;
@@ -55,8 +55,7 @@ const TitleContainer = styled.div`
   font-size: 1.2rem;
   color: ${({ theme: { colors } }) => colors.white};
   font-weight: 600;
-  padding-left: 30px;
-  /* word-break: normal; */
+  padding-left: 28px;
   margin: 0px;
 `;
 
@@ -66,12 +65,10 @@ const Subtitle = styled.p`
   word-break: normal;
   margin-bottom: 1rem;
   text-align: center;
-      ${media.sm`
-  text-align: left;
-
+  ${media.sm`
+    text-align: left;
     font-size: 0.9rem;
-  margin-bottom: 2rem;
-
+    margin-bottom: 2rem;
   `} 
 `;
 
@@ -117,7 +114,7 @@ const Details = styled.div`
  flex-direction: column;
  align-items: center;
   width: 90%;
-  padding: 30px;
+  padding: 28px;
     ${media.xs`
  align-items: flex-start;
 

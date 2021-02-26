@@ -8,7 +8,8 @@ const ImgContainer = styled.a`
   display: none;
   /* top: -90px;
   right: 2vw; */
-  margin-top: 6rem; 
+  margin-top: 8rem; 
+  margin-right: 3%; 
   ${media.md`
   display: block;
   `}

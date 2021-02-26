@@ -83,6 +83,7 @@ const ContainerLeft = styled.div`
   display: flex;
   flex-direction: column; 
   align-items: center;
+  margin-top: -200px;
   ${media.lg`
   width: 18vw; //must be controlled in conjct. with IconContainer
 `}
@@ -94,8 +95,22 @@ const ContainerRight = styled.div`
   display: flex;
   flex-direction: column; 
   align-items: center;
+  margin-top: -200px;
 `;
 
+const RecentPosition = styled.div`
+  /* position: absolute; */
+  width: 60%;
+  margin-bottom: 100px;
+`;
+
+const RecentContainer = styled.div`
+width: 100%;
+top: -400px;
+/* position: relative; */
+  display: flex;
+  justify-content: space-between;
+`;
 
 const IndexPage = () => (
   <Theme>
@@ -110,7 +125,8 @@ const IndexPage = () => (
         </TopContent>
       </TopContainer>
       <TopSVG/>
-      <SplitSVG/>
+      <SplitSVG />
+
       <SplitContainer>
         <ContainerLeft>
           <Skills />
@@ -118,8 +134,13 @@ const IndexPage = () => (
         </ContainerLeft>
         <Divider/>
         <ContainerRight>
-          <Recent title={"The Mars Weather Network"} subTitle={"A weather report using two NASA APIs that tracks   the last seven available Sols (Martian days)."} previewImg={ImgSelector(mars, marssq)} liveLink={'https://ppduss.github.io/  TheMarsWeatherNetwork/'} ghLink={"https://ppduss.github.io/TheMarsWeatherNetwork/"} projSkills={['HTML5', "SCSS", 'Flexbox', 'Grid', "React", 'API']} projTheme='mars'/>
-          <Project class="project" title={"The Mars Weather Network"} subTitle={"A weather report using two NASA APIs that tracks   the last seven available Sols (Martian days)."} previewImg={ImgSelector(mars, marssq)} liveLink={'https://ppduss.github.io/  TheMarsWeatherNetwork/'} ghLink={"https://ppduss.github.io/TheMarsWeatherNetwork/"} projSkills={['HTML5', "SCSS", 'Flexbox', 'Grid', "React", 'API']} projTheme='mars'/>  
+          <RecentPosition>
+            <RecentContainer>
+              <Recent title={"CS Games"} subTitle={"Layout and countdown for CS Games 20"} liveLink={'https://ppduss.github.io/CSGames/'} ghLink={"https://github.com/ppduss/CSGames"} />
+              <Recent title={"CS Games"} subTitle={"Layout and countdown for CS Games 20"}  liveLink={'https://ppduss.github.io/CSGames/'} ghLink={"https://github.com/ppduss/CSGames"} />
+            </RecentContainer>
+          </RecentPosition>
+          <Project class="project" title={"The Mars Weather Network"} subTitle={"A weather report using two NASA APIs that tracks   the last seven available Sols (Martian days)."} previewImg={ImgSelector(mars, marssq)} liveLink={'https://ppduss.github.io/TheMarsWeatherNetwork/'} ghLink={"https://ppduss.github.io/TheMarsWeatherNetwork/"} projSkills={['HTML5', "SCSS", 'Flexbox', 'Grid', "React", 'API']} projTheme='mars'/>  
           <Project class="project" title={"Coffee Prescriber"} subTitle={"A playful app that tracks your happiness to productivity  ratio as you drink coffee and helps monitor whether it's wise to keep drinking."} previewImg={ImgSelector(coffee, coffeesq)} liveLink={'https://ppduss.github.io/Coffee-Prescriber/'} ghLink={"https://github.com/ppduss/ Coffee-Prescriber"} projSkills={['HTML5', "SCSS", 'Flexbox', "React"]} projTheme='coffee' />  
           <Project class="project" title={"Ratatap Drum Pad"} subTitle={"A clone of the patatap.com drum pads using my favorite samples."} previewImg={ImgSelector(ratatap, ratatapsq)} liveLink={'https://ppduss.github.io/Ratatap/'} ghLink={"https://github.com/ppduss/Ratatap"} projSkills={['HTML5', 'CSS3', 'JS', 'Paper.js', 'Howler.js']} projTheme='ratatap'/> 
           <Project class="project" title={"RGB Guessing Game"} subTitle={"Guess which box contains the randomly generated RGB value!"} previewImg={ImgSelector(rgb, rgbsq)} liveLink={'https://ppduss.github.io/RGB/'} ghLink={"https://github.com/ppduss/RGB"} projSkills={  ['HTML', "CSS", 'JS']} projTheme='rgb'/> 
