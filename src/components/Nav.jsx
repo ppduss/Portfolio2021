@@ -13,11 +13,11 @@ const NavContainer = styled.div`
   justify-content: space-around;
   width: 200px;
   height: 30px;
-  margin-top: 1rem;
-  /* background-color: black; */
-    ${media.md`
-  position: absolute;
-    top: 16%;
+  margin: 0 auto;
+  /* top: 75%; */
+  ${media.md`
+    position: absolute;
+    top: 12%;
     right: 9.5%;
 `}
 

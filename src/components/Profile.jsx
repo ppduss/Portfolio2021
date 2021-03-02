@@ -12,7 +12,6 @@ const ProfileContainer = styled.div`
   flex-direction: column; 
   justify-content: center;
   align-items: center;
-  /* overflow: hidden; */
   width: 100%;
   height: 400px;
   ${media.xs`
@@ -36,22 +35,29 @@ const ProfileContainer = styled.div`
 `;
 
 const ProfileContent = styled.div`
-  z-index: 4;
-  margin-top: 30%;
   position: absolute;
+  z-index: 4;
+  /* margin-top: 30%; */
+  top: 22%;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  ${media.md`
+  top: 5%;
+`}
 `;
 
 const PortImg = styled.img`
 /* position: relative; */
   width: 200px;
   border-radius: 35%;
+  margin-bottom: 1rem;
+
   ${media.md`
     width: 200px;
+    margin-bottom: 1.45rem;
 `}
   ${media.xl`
     width: 240px;
@@ -66,12 +72,19 @@ const TxtCont = styled.div`
   border-radius: 12px;
   background-color: rgb(47,90,98,0.9);
   padding-bottom: 2rem;
+  ${media.md`
+   display: none;
+`}
 `;
 
 const MNIMN = styled.h1`
   color: white;
   padding: 15px;
   margin-bottom: 5px;
+   font-size: 2rem;
+  ${media.sm`
+   font-size: 2.1rem;
+`}
 `;
 
 

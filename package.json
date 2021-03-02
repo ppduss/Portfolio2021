@@ -1,8 +1,8 @@
 {
-  "homepage": "https://ppduss.github.io/Portfolio2021/",
+  "homepage": "https://patrickd.dev",
   "name": "gatsby-starter-default",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Patrick Dussault - Front-end Web Developer",
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
@@ -10,6 +10,7 @@
     "deploy": "^1.0.3",
     "gatsby": "^2.32.8",
     "gatsby-image": "^2.11.0",
+    "gatsby-plugin-cname": "^1.0.0",
     "gatsby-plugin-manifest": "^2.12.1",
     "gatsby-plugin-offline": "^3.10.2",
     "gatsby-plugin-react-helmet": "^3.10.0",

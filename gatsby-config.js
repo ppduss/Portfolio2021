@@ -1,11 +1,13 @@
 module.exports = {
-  pathPrefix: "/Portfolio2021",
+  pathPrefix: "",
   siteMetadata: {
+    siteUrl: 'https://patrickd.dev'
     title: `Front-end Web Developer`,
     description: `Patrick Dussault is a web dev from Montreal, Quebec.`,
     author: `Patrick Dussault`,
   },
   plugins: [
+    'gatsby-plugin-cname',
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-styled-components`,

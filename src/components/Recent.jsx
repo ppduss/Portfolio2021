@@ -1,38 +1,7 @@
 import styled from "styled-components";
 import React from "react";
 import media from '../media';
-import backgroundImg from '../images/recent-back.png'
-
-const RecentButton = styled.button`
-  margin: 0 5px;
-  padding: 10px 15px;
-  text-align: center;
-  align-self: right;
-  color: ${({ theme: { colors } }) => colors.black};
-  background-color: ${({ theme: { colors } }) => colors.white};
-  border: 1px solid ${({ theme: { colors } }) => colors.black};
-  font-size: 0.8rem;
-  border-radius: 3px;
-  text-transform: uppercase;
-  outline: none;
-  box-shadow: none;
-  &:focus {
-  }
-  &:visited {
-    border-color: grey;
-  }
-   &:hover {
-    background-color: ${({ theme: { colors } }) => colors.shadyblue};
-    cursor: pointer;
-  }
-  &:active {
-    border: 1px solid grey;
-    outline: none;
-  }
-  ${media.sm`
-  padding: 8px 20px;
-`}
-`;
+import Button2 from '../components/Button2.jsx'
 
 const Proj = styled.div`
   position: relative;
@@ -54,10 +23,11 @@ const Proj = styled.div`
 
 const BackgroundImg = styled.img`
   width: 100%;
-  opacity: 0.6;
+  height: 100%;
+  opacity: 0.5;
   transition: all 300ms linear;
      &:hover {
-     opacity: 1;
+     opacity: 0.8;
   }
 `;
 
@@ -104,8 +74,8 @@ const Recent = ({title, subTitle, previewImg, ghLink, liveLink, projSkills, proj
         <Title >{title}</Title>  
       </TitleContainer>   */}
       <Details>
-          <RecentButton goto={liveLink}>View Live</RecentButton>
-           <RecentButton goto={ghLink}>View Repo</RecentButton>
+          <Button2 goto={liveLink}>View Live</Button2>
+           <Button2 goto={ghLink}>View Repo</Button2>
       </Details>
     </Proj>
 

@@ -21,6 +21,7 @@ const FooterSecondContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 85%;
 `;
 
 
@@ -34,7 +35,7 @@ const Footer = () => (
   <FooterContainer>
     {/* <FooterTitle>Thanks for visiting :)</FooterTitle> */}
     <FooterSecondContainer>
-      <FooterTxt>© {new Date().getFullYear()}, Built with React, <a href="https://styled-components.com/">Styled-Components</a> , and with <a href="https://www.gatsbyjs.com">Gatsby</a><br /> Interested in how I built this portfolio? Check out my <a href="https://github.com/ppduss/Portfolio2021">github repo</a>.
+      <FooterTxt>© {new Date().getFullYear()} - Built with React, <a href="https://styled-components.com/">Styled-Components</a> , and with <a href="https://www.gatsbyjs.com">Gatsby</a>.<br /> Interested in how I built this portfolio? Check out my <a href="https://github.com/ppduss/Portfolio2021">github repo</a>.
         {/* <Nav/> */}
       </FooterTxt>
     </FooterSecondContainer>

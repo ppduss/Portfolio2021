@@ -5,9 +5,11 @@ import { Link } from "gatsby"
 import GlobalStyle from '../globalStyles';
 import Footer from "../components/Footer";
 import TopSVG from '../components/TopContainerSVG';
-import SplitSVG from '../components/SplitContainerSVG';
+import GallerySVG from '../components/GallerySVG';
 import SEO from "../components/seo";
 import Theme from '../Theme';
+import Nav from '../components/Nav';
+
 import img1 from '../images/gallery/Library - 1 of 10.png'
 import img2 from '../images/gallery/Library - 2 of 10.png'
 import img3 from '../images/gallery/Library - 3 of 10.png'
@@ -69,9 +71,10 @@ const GalleryPage = () => (
     <Main>
       <TopContainer>
         <Link to="/">Go back to the homepage</Link>
+        <Nav/>
       </TopContainer>
       <TopSVG/>
-      <SplitSVG />
+      <GallerySVG />
       <Intro>Here is a selection of photos</Intro>
       <GalleryContainer>
         <GalleryImg src={img1}/>

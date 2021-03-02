@@ -8,8 +8,7 @@ const ImgContainer = styled.a`
   display: none;
   /* top: -90px;
   right: 2vw; */
-  margin-top: 8rem; 
-  margin-right: 3%; 
+  margin-top: 2rem; 
   ${media.md`
   display: block;
   `}
@@ -32,7 +31,7 @@ const Img = styled.img`
 `;
 
 const Collage = () => (
-  <ImgContainer href="/Portfolio2021/Gallery">
+  <ImgContainer >
     <Img src={collage} />
   </ImgContainer>
 )
