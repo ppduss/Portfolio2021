@@ -80,7 +80,10 @@ const TopContent = styled.div`
   width: 75%;
 `}
     ${media.xl`
-  width: 70%;
+  width: 72%;
+`}
+    ${media.xxl`
+  width: 80%;
 `}
 `;
 

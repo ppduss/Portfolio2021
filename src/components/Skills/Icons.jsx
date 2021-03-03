@@ -9,7 +9,7 @@ const lineanim = keyframes`
   }
   to {
     height: 30px;
-    width: 9vw;
+    width: 7.5vw;
   }
 `;
 const drop = keyframes`
@@ -28,7 +28,6 @@ const drop = keyframes`
 const IconContainer = styled.div`
   position: relative;
   display: flex;
-  /* flex-wrap: wrap; */
   flex-direction: column;
   align-items: center;
   width: 8vw;
@@ -41,7 +40,7 @@ const IconContainer = styled.div`
   `}
 `;
 const IconName = styled.p`
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   position: absolute;
   transition: all 200ms ease;
   opacity: 0;
@@ -62,7 +61,7 @@ const IconName = styled.p`
   `} 
   ${media.xl`
   font-size: 1rem;
-  left: 12.5vw;
+  left: 12vw;
   `} 
 `;
 
@@ -83,7 +82,7 @@ const SVGContainer = styled.div`
 
 const SVGicon = styled.svg`
   top: 23px;
-  left: 50%;
+  left: 10.5vw;
   width: 0px;
   height: 0px; 
   position: absolute;
@@ -104,12 +103,11 @@ const Line = styled.line`
 
 const Skill = ({ src, name }) => (
   <IconContainer>
-    <Icon src={src} />
+    <Icon src={src} alt={name}/>
     <IconName>{name}</IconName>
     <SVGContainer>
       <SVGicon height="20" width="300">
         <Line x1="0" y1="0" x2="300" y2="0" />
-          Sorry, your browser does not support inline SVG.
       </SVGicon>
     </SVGContainer>
   </IconContainer>

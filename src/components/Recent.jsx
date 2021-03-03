@@ -69,7 +69,7 @@ const Recent = ({title, subTitle, previewImg, ghLink, liveLink, projSkills, proj
   
   return (
     <Proj projectTheme={projTheme}>
-        <BackgroundImg src={previewImg} />
+      <BackgroundImg src={previewImg} alt={title}/>
       {/* <TitleContainer>
         <Title >{title}</Title>  
       </TitleContainer>   */}

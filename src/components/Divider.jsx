@@ -1,15 +1,15 @@
 import React from 'react';
-import styled, { keyframes, css } from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import media from '../media';
 
 
 const lineanim = keyframes`
   from {
-    height: 0;
+    height: 0px;
     opacity: 1;
   }
   to {
-    height: 2800;
+    height: 2800px;
     opacity: 1;
   }
 `;
@@ -21,19 +21,19 @@ const Line = styled.line`
  `;
 
 const Svg = styled.svg`
-z-index: 1;
+  z-index: 1;
   position: absolute;
   left: 18%;
- margin-top: -20vw;
- opacity: 0;
- animation: ${lineanim} 5s cubic-bezier(.41,.99,.74,.95) forwards;
- animation-iteration-count: 1;
- animation-delay: 1000ms;
- display: none;
- z-index: 0;
+  margin-top: -20vw;
+  opacity: 0;
+  animation: ${lineanim} 15s cubic-bezier(.41,.99,.74,.95) forwards;
+  animation-iteration-count: 1;
+  animation-delay: 1000ms;
+  display: none;
+  z-index: 0;
   ${media.lg`
     display: block;
-`}
+  `}
 `;
 
 const Divider = () => (

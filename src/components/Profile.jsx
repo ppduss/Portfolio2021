@@ -20,9 +20,11 @@ const ProfileContainer = styled.div`
   `}
   ${media.md`
   justify-content: space-between;
+  width: 350px;
+  height: 400px;
   `}
     ${media.lg`
-  width: 400px;
+  width: 380px;
   height: 450px;
 
   `}
@@ -92,7 +94,7 @@ const Collage = () => (
   <ProfileContainer>
     <GeodomeSVG />
     <ProfileContent>
-      <PortImg src={portrait} />
+      <PortImg src={portrait} alt="portrait"/>
       <TxtCont>
         <MNIMN>Patrick Dussault</MNIMN>
         <h3>Web Developer</h3>

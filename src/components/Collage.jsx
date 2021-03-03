@@ -8,7 +8,7 @@ const ImgContainer = styled.a`
   display: none;
   /* top: -90px;
   right: 2vw; */
-  margin-top: 2rem; 
+  margin-top: 4rem; 
   ${media.md`
   display: block;
   `}
@@ -32,7 +32,7 @@ const Img = styled.img`
 
 const Collage = () => (
   <ImgContainer >
-    <Img src={collage} />
+    <Img src={collage} alt="collage"/>
   </ImgContainer>
 )
 

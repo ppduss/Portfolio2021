@@ -7,7 +7,6 @@ const RecentButton = styled.button`
   margin: 0 5px;
   padding: 10px 15px;
   text-align: center;
-  align-self: right;
   color: ${({ theme: { colors } }) => colors.black};
   background-color: ${({ theme: { colors } }) => colors.white};
   border: none;

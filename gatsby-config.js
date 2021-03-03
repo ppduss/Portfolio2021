@@ -1,7 +1,7 @@
 module.exports = {
   pathPrefix: "",
   siteMetadata: {
-    siteUrl: 'https://patrickd.dev'
+    siteUrl: 'https://patrickd.dev',
     title: `Front-end Web Developer`,
     description: `Patrick Dussault is a web dev from Montreal, Quebec.`,
     author: `Patrick Dussault`,

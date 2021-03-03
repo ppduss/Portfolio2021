@@ -115,10 +115,9 @@ const Details = styled.div`
  align-items: center;
   width: 90%;
   padding: 28px;
-    ${media.xs`
- align-items: flex-start;
-
-    width: 60%;
+  ${media.xs`
+  align-items: flex-start;
+  width: 60%;
   `}
 `;
 
@@ -144,7 +143,7 @@ const Project = ({title, subTitle, previewImg, ghLink, liveLink, projSkills, pro
             <Button goto={ghLink}>View Repo</Button>
           </div>
         </Details>
-        <Preview src={previewImg}/>
+        <Preview src={previewImg} alt={title}/>
       </Content>
     </Proj>
 

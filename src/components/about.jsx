@@ -24,7 +24,7 @@ const AboutContainer = styled.div`
   justify-content: center;
   align-items: center;
   padding-top: 160px;
-  height: 1200px;
+  height: 1400px;
   ${media.sm`
    flex-direction: row;
   `}
@@ -127,10 +127,10 @@ const AboutTxt = styled.p`
 const About = () => (
   <AboutContainer>
     <AboutBlock />
-    <AboutImg src={aboutBerd} />
+    <AboutImg src={aboutBerd} alt="about portrait"/>
     <AboutSecondContainer>
       <PaintContainer>
-        <AboutPaint src={aboutPaint} />
+        <AboutPaint src={aboutPaint} alt="paint gif"/>
       </PaintContainer>
       <AboutTitle>About<br />me</AboutTitle>
       <AboutTxt>I'm a front-end developer based in Montreal who loves creating beautiful and engaging websites built with elegant code. Always interested in exploring new and creative ways to improve efficiency user experience. I also have experience with 2D/3D modeling for manufacturing, 3D printing, CNC programming, and photography editing.</AboutTxt>

@@ -8,7 +8,6 @@ const StyledButton = styled.button`
   margin-right: 15px;
   padding: 8px 12px;
   text-align: center;
-  align-self: right;
   color: ${({ theme: { colors } }) => colors.black};
   background-color: ${({ theme: { colors } }) => colors.white};
   border: 1px solid ${({ theme: { colors } }) => colors.black};
