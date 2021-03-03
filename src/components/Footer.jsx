@@ -7,16 +7,22 @@ import FooterSVG from './FooterMountainSVG';
 import FooterSVG2 from './FooterMountainSVG2';
 import FooterSVG3 from './FooterMountainSVG3';
 import FooterSVG4 from './FooterMountainSVG4';
-import FooterSVGCity from './FooterSVGCity';
+import FooterSVG5 from './FooterMountainSVG5';
+import FooterSVG6 from './FooterMountainSVG6';
 
 const FooterContainer = styled.div`
   position: relative;
-  background: linear-gradient(#2f5a62, #4f7680);
+  background: linear-gradient(#2f5a62, #1f5a62);
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  height: 700px;
+  height: 300px;
+  ${media.sm`
+  justify-content: flex-end;
+  height: 900px;
+  background: linear-gradient(#2f5a62, #83663b, #ffb288);
+`}
 `;
 
 const FooterTitle = styled.p`
@@ -24,18 +30,21 @@ const FooterTitle = styled.p`
 `;
 
 const FooterSecondContainer = styled.div`
-  background-color: rgba(20, 7, 7, 0.95);
-  border-radius: 18px;
+  background-color: #193135;
   z-index: 9;
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 85%;
+  max-width: 100%;
+  ${media.sm`
+    width: 100%;
+    background-color: rgba(56, 99, 124, 0.4);
+`}
 `;
 
 const FooterTxt = styled.p`
   color: white;
-  padding: 26px 36px;
+  padding: 36px 36px;
   text-align: center;
   margin-bottom: 0px;
 `;
@@ -46,10 +55,11 @@ const Footer = () => (
     <FooterSVG2/>
     <FooterSVG3 />
     <FooterSVG4 />
-    <FooterSVGCity />
+    <FooterSVG5 />
+    <FooterSVG6 />
     {/* <FooterTitle>Thanks for visiting :)</FooterTitle> */}
     <FooterSecondContainer>
-      <FooterTxt>© {new Date().getFullYear()} - Built with React, <a href="https://styled-components.com/">Styled-Components</a> , and with <a href="https://www.gatsbyjs.com">Gatsby</a>.<br /> Interested in how I built this portfolio? Check out my <a href="https://github.com/ppduss/Portfolio2021">github repo</a>.
+      <FooterTxt>© {new Date().getFullYear()} - Built with React, <a href="https://styled-components.com/">Styled-Components</a> , and <a href="https://www.gatsbyjs.com">Gatsby</a>.<br /> Interested in how I built this portfolio? Check out my <a href="https://github.com/ppduss/Portfolio2021">github repo</a>.
         {/* <Nav/> */}
       </FooterTxt>
     </FooterSecondContainer>

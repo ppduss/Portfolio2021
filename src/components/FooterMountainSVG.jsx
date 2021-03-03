@@ -1,16 +1,27 @@
 import React from 'react';
 import styled from 'styled-components';
+import media from '../media';
 
 const SVG = styled.svg`
   z-index: 6;
   position: absolute;
-  bottom: 0;
-  margin-bottom: -1px;
-  transform: scale(1, -1); 
+  bottom: 0vw;
+  display: none;
+  ${media.sm`
+  display: block;
+`}
 `;
 
 const TopSVG = () => (
-<SVG xmlns="http://www.w3.org/2000/svg" viewBox="0 200 1440 320"><path fill="#1c1d2b" fill-opacity="1" d="M0,400L450,264L960,320L1440,224L1440,0L960,0L480,0L0,0Z"></path></SVG>
+  <SVG xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 420">
+        <defs>
+      <linearGradient id="Gradient" gradientTransform="rotate(90)">
+        <stop offset="0%" stop-color="#0f162b"/>
+        <stop offset="100%" stop-color="#030508"/>
+      </linearGradient>
+    </defs>
+    <path fill={'url(#Gradient'} fill-opacity="1" d="M0,40L720,0L1240,50L1440,20L1440,420L0,420Z"></path>
+  </SVG>
 );
 
 export default TopSVG;

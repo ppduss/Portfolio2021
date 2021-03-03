@@ -68,7 +68,7 @@ const Subtitle = styled.p`
   ${media.sm`
     text-align: left;
     font-size: 0.9rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   `} 
 `;
 
@@ -96,7 +96,7 @@ const Tools = styled.div`
     ${media.sm`
   justify-content: flex-start;
 
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   `} 
 `;
 
