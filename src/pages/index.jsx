@@ -27,6 +27,8 @@ import Nav from '../components/Nav';
 import Recent from '../components/Recent';
 import Prohibition from '../images/Prohibition.png';
 import Watchdogs from '../images/watchdogs.png';
+import Naturally from '../images/Naturally2.png';
+import Urania from '../images/Urania.png';
 
 function ImgSelector(img, imgsq) {
   const [imgSelection, setSelection] = useState(img)
@@ -147,13 +149,14 @@ const RecentContainer = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
+  flex-wrap: wrap;
   margin-bottom: 80px;
     ${media.sm`
   flex-direction: row;
 `}
     ${media.md`
-    width: 60%;
+    width: 70%;
 `}
 `;
 
@@ -186,6 +189,8 @@ const IndexPage = () => (
           <h3 style={{ color: 'black', marginBottom: '4rem', textTransform: "uppercase"}}>Recent projects</h3>
           {/* <RecentPosition> */}
           <RecentContainer>
+            <Recent title={"Naturally"} subTitle={"Webflow Mock Website"} liveLink={'https://wellnaturally.webflow.io/'} ghLink={""} previewImg={Naturally}/>
+            <Recent title={"Urania"} subTitle={"Mock Wordpress"} liveLink={'https://uraniaai.wordpress.com/'} ghLink={""} previewImg={Urania} />
             <Recent title={"CS Games"} subTitle={"Layout and countdown for CS Games 20"} liveLink={'https://ppduss.github.io/CSGames/'} ghLink={"https://github.com/ppduss/CSGames"} previewImg={Prohibition}/>
             <Recent title={"Watchdogs"} subTitle={"Watchdogs"}  liveLink={'https://ppduss.github.io/Watchdogs/'} ghLink={"https://github.com/ppduss/Watchdogs"} previewImg={Watchdogs}/>
           </RecentContainer>

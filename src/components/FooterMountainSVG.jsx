@@ -16,11 +16,11 @@ const TopSVG = () => (
   <SVG xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 420">
         <defs>
       <linearGradient id="Gradient" gradientTransform="rotate(90)">
-        <stop offset="0%" stop-color="#0f162b"/>
-        <stop offset="100%" stop-color="#030508"/>
+        <stop offset="0%" stop-color="#0e1731"/>
+        <stop offset="100%" stop-color="#000000"/>
       </linearGradient>
     </defs>
-    <path fill={'url(#Gradient'} fill-opacity="1" d="M0,40L720,0L1240,50L1440,20L1440,420L0,420Z"></path>
+    <path fill={'url(#Gradient'} fill-opacity="1" d="M0,0L720,50L1240,50L1440,20L1440,420L0,420Z"></path>
   </SVG>
 );
 

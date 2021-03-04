@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import React from "react";
+import React, { useState } from "react";
 import media from '../media';
 import Button2 from '../components/Button2.jsx'
 
@@ -10,24 +10,28 @@ const Proj = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 40px;
-  border-radius: 3px;
+  margin: 4px;
+  /* border-radius: 8px; */
   width: 275px;
   height: 275px;
   overflow: hidden;
-    ${media.xs`
-    width: 300px;
-  height: 300px;
+  ${media.xs`
+    width: 375px;
+    height: 300px;
 `}
 `;
 
 const BackgroundImg = styled.img`
-  width: 100%;
-  height: 100%;
-  opacity: 0.5;
-  transition: all 300ms linear;
-     &:hover {
-     opacity: 0.8;
+  max-width: none;
+  position: absolute;
+  object-fit: cover;
+  max-height: 100%;
+  opacity: 10;
+  transition: all 200ms linear;
+  margin: 0 auto;
+  ${Proj}:hover & {
+    opacity: 0.5;
+    filter: blur(4px);
   }
 `;
 
@@ -66,16 +70,22 @@ position: absolute;
 `;
 
 const Recent = ({title, subTitle, previewImg, ghLink, liveLink, projSkills, projTheme}) => {
-  
+  const [showButton, setShowButton] = useState(false);
+
   return (
-    <Proj projectTheme={projTheme}>
+    <Proj
+      projectTheme={projTheme}
+      onMouseEnter={() => setShowButton(true)}
+      onMouseLeave={() => setShowButton(false)}
+    >
       <BackgroundImg src={previewImg} alt={title}/>
       {/* <TitleContainer>
         <Title >{title}</Title>  
       </TitleContainer>   */}
       <Details>
-          <Button2 goto={liveLink}>View Live</Button2>
-           <Button2 goto={ghLink}>View Repo</Button2>
+        {showButton ? <Button2 goto={liveLink}>View Live</Button2> : null}
+        {showButton && ghLink ? <Button2 goto={ghLink}>View Repo</Button2> : null}
+        
       </Details>
     </Proj>
 

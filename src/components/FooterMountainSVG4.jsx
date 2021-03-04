@@ -5,7 +5,7 @@ import media from '../media';
 const SVG = styled.svg`
   z-index: 3;
   position: absolute;
-  bottom: 25vw;
+  bottom: 23vw;
   width: 70%;
   display: none;
    ${media.sm`
